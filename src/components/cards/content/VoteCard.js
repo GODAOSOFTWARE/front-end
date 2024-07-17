@@ -9,12 +9,12 @@
 
 import React from 'react';
 
-const Card = ({ title, description, image, projectNumber, members }) => {
+const VoteCard = ({ title, description, image, voteNumber, members }) => {
     return (
         <div className="bg-white p-6 shadow-md rounded-lg flex flex-col">
             <img src={image} alt={title} className="rounded-lg mb-4 w-full h-40 object-cover" />
             <div className="mb-4 flex-1">
-                <h3 className="text-sm font-semibold text-gray-500">Голосование #{projectNumber}</h3>
+                <h3 className="text-sm font-semibold text-gray-500">Голосование #{voteNumber}</h3>
                 <h2 className="text-xl font-bold text-gray-800">{title}</h2>
                 <p className="text-gray-600">{description}</p>
             </div>
@@ -35,4 +35,4 @@ const Card = ({ title, description, image, projectNumber, members }) => {
     );
 };
 
-export default Card;
+export default VoteCard;

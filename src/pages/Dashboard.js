@@ -7,7 +7,7 @@
 
 
 import React from 'react';
-import Card from '../components/cards/content/Card';
+import VoteCard from '../components/cards/content/VoteCard';
 
 const Dashboard = () => {
     const cardsData = [
@@ -54,9 +54,9 @@ const Dashboard = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cardsData.map((card, index) => (
-                    <Card
+                    <VoteCard
                         key={index}
-                        projectNumber={card.projectNumber}
+                        voteNumber={card.projectNumber}
                         title={card.title}
                         description={card.description}
                         image={card.image}

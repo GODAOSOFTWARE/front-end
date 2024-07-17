@@ -10,10 +10,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './pages/index.css';
+import './styles/index.css';
 import App from './app/App';
 import reportWebVitals from './app/reportWebVitals';
-import './pages/index.css';
+import './styles/index.css';
 import {Web3ModalProvider} from "./components/web3/Web3ModalProvider";
 
 
