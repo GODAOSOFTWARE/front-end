@@ -1,3 +1,11 @@
+// src/components/MetaMaskAuth.js
+
+/// Этот файл определяет компонент для аутентификации через MetaMask (MetaMaskAuth).
+/// Компонент позволяет пользователю подключиться к MetaMask,
+//  переключаться между сетями и управлять подключением.
+/// Компонент обрабатывает события изменения аккаунтов и сетей,
+// подключение и отключение MetaMask, а также переключение между различными сетями.
+
 import React, { useState, useEffect } from 'react';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { Web3Provider } from '@ethersproject/providers';

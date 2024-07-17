@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Votes = () => {
+const Members = () => {
     return (
         <div>
             <h1 className="text-2xl font-bold">Члены DAO</h1>
@@ -9,4 +9,4 @@ const Votes = () => {
     );
 };
 
-export default Votes;
+export default Members;

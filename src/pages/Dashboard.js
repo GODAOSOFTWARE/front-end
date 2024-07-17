@@ -1,5 +1,13 @@
+// src/pages/Dashboard.js
+
+/// Этот файл определяет страницу панели управления (Dashboard).
+/// Панель управления отображает активные голосования в виде карточек.
+/// Данные для карточек (проекты) загружаются и отображаются с использованием
+// компонента `Card`.
+
+
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../components/cards/content/Card';
 
 const Dashboard = () => {
     const cardsData = [

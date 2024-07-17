@@ -1,3 +1,11 @@
+// src/components/Web3ModalProvider.tsx
+
+/// Этот файл определяет провайдер Web3Modal (Web3ModalProvider).
+/// Провайдер используется для настройки и предоставления
+// Web3-функциональности всем дочерним компонентам.
+/// Компонент использует библиотеки wag mi и react-query
+// для настройки Web3 и управления состоянием.
+
 import * as React from 'react';
 import { createWeb3Modal } from '@web3modal/wagmi/react';
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config';

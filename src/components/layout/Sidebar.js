@@ -1,3 +1,12 @@
+// src/components/Sidebar.js
+
+/// Этот файл определяет компонент боковой панели (Sidebar).
+/// Боковая панель содержит ссылки на разные страницы приложения,
+// такие как панель управления,профиль и таблицы.
+// Включает иконки для каждой ссылки, используемые
+// компоненты из библиотеки `react-icons`.
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaUser, FaTable, FaBell } from 'react-icons/fa';

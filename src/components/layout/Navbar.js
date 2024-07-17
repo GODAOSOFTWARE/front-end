@@ -1,9 +1,15 @@
+/// src/components/Navbar.js
+
+/// Этот файл определяет компонент навигационной панели (Navbar).
+/// Навигационная панель включает в себя элементы интерфейса, такие как кнопка для подключения,
+/// значок уведомлений и значок профиля. Также она содержит поле для поиска.
+
 import * as React from 'react';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
-import ConnectButton from './ConnectButton';
-import Notifications from "../pages/Notifications";
-import Profile from "../pages/Profile";
-import MetaMaskAuth from "./MetaMaskAuth";
+import ConnectButton from '../web3/ConnectButton';
+import Notifications from "../../pages/Notifications";
+import Profile from "../../pages/Profile";
+
 
 const Navbar = () => {
     return (
