@@ -1,83 +1,98 @@
-# Getting Started with Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## Available Scripts
-In the project directory, you can run:
+# My Project
 
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Описание
 
-### `npm test`
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+GO DAO - это современное веб-приложение, разработанное с использованием React, Web3 и других современных технологий. Проект предназначен для управления децентрализованными автономными организациями (DAO) и включает функциональность для аутентификации через MetaMask, работы с голосованиями и уведомлениями.
 
-### `npm run build`
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Установка
 
-### `npm run eject`
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Чтобы установить и запустить проект, выполните следующие шаги:
 
-# GO DAO VOTE
-## Описание проекта
-GO DAO VOTE - это платформа для голосования на базе DAO 
-(Decentralized Autonomous Organization), использующая Web3Modal 
-для подключения кошельков пользователей. Проект поддерживает 
-несколько блокчейнов, включая Ethereum, Binance Smart Chain, 
-Decimal Smart Chain и Telegram Open Network (TON).
+1. Клонируйте репозиторий:
+    ```bash
+    git clone https://github.com/my-repo/my-project.git
+    ```
 
-## Задачи проекта
-- Реализовать интерфейс для голосования с использованием технологии блокчейн.
-- Обеспечить безопасное и удобное подключение кошельков пользователей с помощью Web3Modal.
-- Поддержка различных блокчейнов для гибкости и масштабируемости.
+2. Перейдите в директорию проекта:
+    ```bash
+    cd my-project
+    ```
 
-## Поддерживаемые блокчейны и настройки сетей
-1.  Ethereum Mainnet 
-2. Binance Smart Chain Mainnet 
-3. Decimal Smart Chain Mainnet 
-4. Telegram Open Network (TON)
+3. Установите зависимости:
+    ```bash
+    npm install
+    ```
 
+## Скрипты
 
-## Проблема с кнопкой "Connect Wallet"
-- Описание проблемы
-При попытке использовать компонент `ConnectButton` для подключения кошелька возникают следующие проблемы:
-1. Ошибки в Web3ModelProvider.tsx
-2. Ошибка TypeScript:TS2339: Property 'w3m-button' does not exist on type 'JSX.IntrinsicElements'.
-2. Ошибка при импорте компонента `ConnectButton` в файл `Navbar.js`:Cannot find module './ConnectButton'
+В `package.json` определены следующие скрипты:
 
-- Что нужно сделать
-1. Исправить ошибки TypeScript, чтобы компонент `w3m-button` корректно распознавался как JSX элемент.
-2. Убедиться, что компонент `ConnectButton` правильно импортируется и используется в файле `Navbar.js`.
-3. Проверить и настроить Webpack/TypeScript для корректной работы с файлами `.tsx`.
-4. Встроить поддержку сетей
-- **Имя сети:** Ethereum Mainnet
-- **URL сети:** https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID
-- **ID блокчейна:** 1
-- **Символ валюты:** ETH
-- **URL блок-эксплорера:** https://etherscan.io
+- `npm start`: Запуск проекта в режиме разработки.
+- `npm run build`: Сборка проекта для продакшн-версии.
+- `npm test`: Запуск тестов с использованием Jest.
 
-### Binance Smart Chain Mainnet
-- **Имя сети:** Binance Smart Chain Mainnet
-- **URL сети:** https://bsc-dataseed.binance.org/
-- **ID блокчейна:** 56
-- **Символ валюты:** BNB
-- **URL блок-эксплорера:** https://bscscan.com
+## Структура проекта
 
-### Decimal Smart Chain Mainnet
-- **Имя сети:** Decimal Smart Chain Mainnet
-- **URL сети:** https://node.decimalchain.com/web3
-- **ID блокчейна:** 75
-- **Символ валюты:** DEL
+### Компоненты
+- **src/components/Card.js**: Компонент карточки, используется для отображения информации о проектах.
+- **src/components/ConnectButton.tsx**: Компонент кнопки подключения к Web3-сервисам.
+- **src/components/MetaMaskAuth.js**: Компонент для аутентификации через MetaMask.
+- **src/components/Modal.js**: Компонент модального окна.
+- **src/components/Navbar.js**: Компонент навигационной панели.
+- **src/components/Sidebar.js**: Компонент боковой панели.
+- **src/components/Web3ModalProvider.tsx**: Провайдер Web3Modal для настройки и предоставления Web3-функциональности.
 
+### Страницы
+- **src/pages/Dashboard.js**: Страница панели управления.
+- **src/pages/Notifications.js**: Страница уведомлений.
+- **src/pages/Profile.js**: Страница профиля.
+- **src/pages/SignIn.js**: Страница входа.
+- **src/pages/SignUp.js**: Страница регистрации.
 
-## Инструкция по созданию компонента ConnectButton
-- [Документация WalletConnect](https://docs.walletconnect.com/appkit/react/core/installation)
+### Стили и шрифты
+- **src/styles/App.css**: Глобальные стили для компонента App.
+- **src/styles/index.css**: Глобальные стили для всего приложения.
+- **src/styles/fonts/**: Папка для пользовательских шрифтов.
+    - **src/styles/fonts/custom-font.ttf**: Пример пользовательского шрифта.
+    - **src/styles/fonts/another-font.woff**: Еще один пример шрифта.
 
+### Тесты
+- **src/App.test.js**: Тесты для компонента App.
+- **src/setupTests.js**: Настройки для среды тестирования.
+- **src/reportWebVitals.js**: Сбор и отчетность веб-показателей.
+
+### Другие файлы
+- **src/App.js**: Этот файл отвечает за маршрутизацию приложения. Он определяет маршруты для разных страниц и компоненты, которые должны быть отображены на этих маршрутах. Основная структура приложения включает боковую панель (Sidebar), навигационную панель (Navbar) и основное содержимое (main). В этом файле мы определяем маршруты для страниц Dashboard, Profile, Votes и Notifications.
+- **src/index.js**: Этот файл является точкой входа для React-приложения. Он загружает основное приложение (App) и монтирует его в HTML-документ. Также подключается провайдер Web3Modal для работы с Web3. В будущем, когда проект будет разрастаться, этот файл может расширяться для включения дополнительных провайдеров, настроек глобального состояния (например, Redux или Context API), инициализации различных сервисов (например, аналитики, логирования ошибок) и других необходимых компонентов на уровне приложения.
+- **src/logo.svg**: Этот файл содержит SVG-изображение логотипа приложения. SVG используется для отображения логотипа в различных компонентах.
+- **package.json**: Этот файл содержит метаданные проекта и список зависимостей. Здесь определяются все зависимости, скрипты и другая информация, необходимая для сборки и запуска проекта. Основные разделы:
+    - `name`: Имя проекта.
+    - `version`: Версия проекта.
+    - `description`: Краткое описание проекта.
+    - `main`: Точка входа для приложения.
+    - `scripts`: Набор команд, которые можно выполнять с помощью npm, например, запуск сборки или тестов.
+    - `dependencies`: Список зависимостей, которые необходимы для работы проекта.
+    - `devDependencies`: Список зависимостей, которые необходимы только для разработки.
+    - `repository`: Информация о репозитории, где хранится код проекта.
+    - `keywords`: Ключевые слова, связанные с проектом.
+    - `author`: Автор проекта.
+    - `license`: Лицензия, под которой распространяется проект.
+- **package-lock.json**: Этот файл фиксирует точные версии установленных зависимостей. Он гарантирует, что проект будет использовать те же версии зависимостей, что и при первоначальной установке.
+
+## Зависимости
+
+Проект использует следующие основные зависимости:
+
+- `react`: Библиотека для построения пользовательских интерфейсов.
+- `react-dom`: Пакет для работы с DOM в React.
+- `@web3modal/wagmi`: Пакет для работы с Web3Modal и Wagmi.
+- `wagmi`: Реактивные хуки и провайдеры для работы с Web3.
+- `@ethersproject/providers`: Провайдеры для работы с Ethereum.
+
+## Автор
+
+- Разработчик: [Константин Медведев]
+
+## Лицензия
+
+Этот проект лицензирован под лицензией MIT. Подробнее см. [LICENSE](LICENSE).
