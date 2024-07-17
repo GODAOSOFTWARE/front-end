@@ -1,0 +1,4 @@
+fyne.io/fyne/v2 v2.4.5 h1:W6jpAEmLoBbKyBB+EXqI7GMJ7kLgHQWCa0wZHUV2VfQ=
+fyne.io/fyne/v2 v2.4.5/go.mod h1:SlOgbca0y80cRObu/JOhxIJdIgtoW7aCyqUVlTMgs0Y=
+github.com/zserge/webview v0.0.0-20240612062922-67d11619d506 h1:MyWIspCOWUuaiphyYbtU2et/27xjNHIIGz2oHUvf8mw=
+github.com/zserge/webview v0.0.0-20240612062922-67d11619d506/go.mod h1:a1CV8KR4Dd1eP2g+mEijGOp+HKczwdKHWyx0aPHKvo4=

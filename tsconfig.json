@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+<<<<<<< HEAD
+    "types": ["./src/custom.d.ts", "@types/react", "@types/node"] // Добавлено сюда
+=======
+    "types": ["./src/custom.d.ts"] // Добавьте этот параметр для включения кастомных типов
+>>>>>>> a4e9c6f31d660ab99e1499001ca12ffec2b370ff
+  },
+  "include": ["src"]
+}
