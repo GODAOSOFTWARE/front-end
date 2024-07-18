@@ -14,7 +14,7 @@ import './styles/index.css';
 import App from './app/App';
 import reportWebVitals from './app/reportWebVitals';
 import './styles/index.css';
-import {Web3ModalProvider} from "./components/web3/Web3ModalProvider";
+import {Web3ModalProvider} from "./components/web3/Web3ModalProvider.tsx";
 
 
 ReactDOM.render(

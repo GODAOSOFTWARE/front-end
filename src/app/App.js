@@ -1,11 +1,3 @@
-//src//App,js
-
-//// Этот файл отвечает за маршрутизацию приложения.
-// Он определяет маршруты для разных страниц и компоненты,
-// которые должны быть отображены на этих маршрутах.
-// Основная структура приложения включает боковую панель (Sidebar),
-// навигационную панель (Navbar) и основное содержимое (main).
-// В этом файле мы определяем маршруты для страниц Dashboard, Profile, Members и Notifications
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/layout/Sidebar';
@@ -15,7 +7,8 @@ import Profile from '../pages/Profile';
 import Members from '../pages/members';
 import Notifications from '../pages/Notifications';
 import SignIn from '../pages/SignIn';
-import ConnectButton from "../components/web3/ConnectButton";  // Добавляем импорт страницы SignIn
+import ConnectButton from "../components/web3/ConnectButton.tsx";  // Добавляем импорт страницы SignIn
+
 
 function App() {
     return (

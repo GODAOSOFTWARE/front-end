@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
-import ConnectButton from '../web3/ConnectButton';
+import ConnectButton from '../web3/ConnectButton.tsx';
 import Notifications from "../../pages/Notifications";
 import Profile from "../../pages/Profile";
 
