@@ -24,6 +24,7 @@ const Navbar = () => {
                     <img src={avatarUrl} alt="User Avatar" className="avatar-icon" />
                 </div>
                 <ConnectButton /> {ConnectButton}
+                <button className="sign-in-button mx-2">Sign In</button>
             </div>
         </nav>
     );
