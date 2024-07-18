@@ -5,7 +5,7 @@ import Notifications from "../../pages/Notifications";
 import './Navbar.css'; // Подключаем CSS файл
 
 const Navbar = () => {
-    const avatarUrl = "https://backend.ddapps.io//storage/uploads/q/6/7/d/u/jQmUFUKzzGcBxCsgoKix9rXYeDls5E8tadVPH3Id.jpg"; // Ссылка на изображение-заглушку
+    const avatarUrl = "https://backend.ddapps.io/storage/uploads/9/t/8/6/f/vAgMqFWkaqSd9Rtfzi7q6dMZsixTng7AUQBfcdZI.jpg"; // Ссылка на изображение-заглушку
 
     return (
         <nav className="bg-[#F5F7F8] p-4 flex justify-between items-center">

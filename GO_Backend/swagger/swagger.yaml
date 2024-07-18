@@ -1,0 +1,707 @@
+openapi: 3.0.0
+info:
+  title: GO DAO
+  version: 1.0.0
+paths:
+  /get-voting-results-by-wallet:
+    get:
+      summary: Получить актуальные результаты голосования по кошельку
+      description: Подводит итоги голосования по выбранному адресу.
+      tags:
+        - Results
+      parameters:
+        - in: query
+          name: wallet_address
+          schema:
+            type: string
+          required: true
+          description: Адрес кошелька для получения результатов голосования
+        - in: query
+          name: offset
+          schema:
+            type: integer
+            required: false
+            description: Смещение от начала списка транзакций (по умолчанию 0)
+      responses:
+        '200':
+          description: Список результатов голосования
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DAOTeamVoteResultsResponse'
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /votes:
+    post:
+      summary: Создать новое голосование
+      description: Создает новое пользовательское голосование.
+      tags:
+        - Votes
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/VoteWithoutID'
+      responses:
+        '201':
+          description: Голосование создано
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vote'
+        '400':
+          description: Неверный ввод
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /votes/{id}:
+    get:
+      summary: Получить голосование по ID
+      description: Получает новое пользовательское голосование по ID.
+      tags:
+        - Votes
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Голосование
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vote'
+        '404':
+          description: Голосование не найдено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+    delete:
+      summary: Удалить голосование по ID
+      description: Удаляет новое пользовательское голосование по ID.
+      tags:
+        - Votes
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Голосование удалено
+        '404':
+          description: Голосование не найдено
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /votes/{id}/vote:
+    post:
+      summary: Добавить голос пользователя
+      description: Добавляет голос пользователя к голосованию.
+      tags:
+        - Votes
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserVoteInput'
+      responses:
+        '201':
+          description: Голос пользователя добавлен
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserVote'
+        '400':
+          description: Неверный ввод
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /votes/{id}/votes:
+    get:
+      summary: Получить актуальные результаты голосования по его ID
+      description: Получает все голоса пользователей для указанного голосования.
+      tags:
+        - Results
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Список голосов пользователей
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserVote'
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /auth/login:
+    post:
+      summary: Получить JWT токен
+      description: Авторизация пользователя.
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequest'
+      responses:
+        '200':
+          description: Успешная авторизация
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '400':
+          description: Неверный запрос
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /auth/me:
+    get:
+      summary: Получить информацию о текущем пользователе
+      description: >
+        Получение информации о текущем пользователе. **Требуется авторизация.** Пример заголовка авторизации:
+        ```
+        Authorization: Bearer {token}
+        ```
+      tags:
+        - Authentication
+      parameters:
+        - name: with_user_information
+          in: query
+          required: true
+          schema:
+            type: boolean
+            example: true
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Информация о пользователе
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Неавторизован
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /api/v1/withdraw:
+    post:
+      summary: Снять средства
+      description: Снятие средств с указанием суммы и адреса.
+      tags:
+        - Transactions
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WithdrawRequest'
+      responses:
+        '200':
+          description: Успешное снятие средств
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Withdrawal successful"
+        '400':
+          description: Неверный запрос
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '401':
+          description: Неавторизован
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /wallets:
+    post:
+      summary: Добавить кошелек и силу голоса
+      description: Добавляет новый адрес кошелька и силу голоса в базу данных.
+      tags:
+        - Wallets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WalletStrength'
+      responses:
+        '201':
+          description: Кошелек добавлен
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Wallet added successfully"
+        '400':
+          description: Неверный ввод
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  /wallets/{wallet_address}:
+    delete:
+      summary: Удалить кошелек и силу голоса
+      description: Удаляет адрес кошелька и силу голоса из базы данных.
+      tags:
+        - Wallets
+      parameters:
+        - name: wallet_address
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Кошелек удален
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Wallet deleted successfully"
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /tables:
+    get:
+      summary: "Получить названия таблиц"
+      description: "Возвращает список названий всех таблиц в базе данных"
+      tags:
+        - "Tables"
+      responses:
+        "200":
+          description: "Успешная операция"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  table_names:
+                    type: array
+                    items:
+                      type: string
+        "500":
+          description: "Ошибка сервера"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /tables/{table_name}/elements:
+    get:
+      summary: "Получить элементы таблицы"
+      description: "Возвращает элементы указанной таблицы"
+      tags:
+        - "Tables"
+      parameters:
+        - name: "table_name"
+          in: path
+          required: true
+          description: "Название таблицы"
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Успешная операция"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  elements:
+                    type: array
+                    items:
+                      type: object
+        "500":
+          description: "Ошибка сервера"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    DAOTeamVote:
+      type: object
+      properties:
+        message:
+          type: string
+        from:
+          type: string
+        vote_power:
+          type: integer
+        hash:
+          type: string
+    DAOTeamVoteResultsResponse:
+      type: object
+      properties:
+        dao_members:
+          type: integer
+        trx_count:
+          type: integer
+        turnout:
+          type: string
+        votes_for:
+          type: string
+        votes_against:
+          type: string
+        voting_status:
+          type: string
+        resolution:
+          type: string
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/DAOTeamVote'
+    Vote:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        subtitle:
+          type: string
+        description:
+          type: string
+        voter:
+          type: string
+        choice:
+          type: string
+          enum: ["За", "Против"]
+        vote_power:
+          type: integer
+        wallet_address:
+          type: string
+    VoteWithoutID:
+      type: object
+      required:
+        - title
+        - subtitle
+        - description
+        - choice
+      properties:
+        title:
+          type: string
+          example: "Sample Title"
+        subtitle:
+          type: string
+          example: "Sample Subtitle"
+        description:
+          type: string
+          example: "Sample Description"
+        choice:
+          type: string
+          enum: ["За", "Против"]
+          example: "За"
+    UserVote:
+      type: object
+      properties:
+        id:
+          type: integer
+        vote_id:
+          type: integer
+        voter:
+          type: string
+        choice:
+          type: string
+          enum: ["За", "Против"]
+        vote_power:
+          type: integer
+    UserVoteInput:
+      type: object
+      required:
+        - choice
+      properties:
+        choice:
+          type: string
+          enum: ["За", "Против"]
+          example: "За"
+    AuthRequest:
+      type: object
+      properties:
+        login:
+          type: string
+        password:
+          type: string
+        device_name:
+          type: string
+    AuthResponse:
+      type: object
+      properties:
+        token:
+          type: string
+    User:
+      type: object
+      properties:
+        ID:
+          type: integer
+        Login:
+          type: string
+        Email:
+          type: string
+        Phone:
+          type: string
+        Nick:
+          type: string
+        Locale:
+          type: string
+        Avatar:
+          type: string
+        Wallet:
+          type: string
+        Roles:
+          type: array
+          items:
+            type: string
+        Permissions:
+          type: array
+          items:
+            type: string
+        Subscriptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Subscription'
+    Subscription:
+      type: object
+      properties:
+        ID:
+          type: integer
+        Tag:
+          type: string
+        PlanID:
+          type: integer
+        Name:
+          type: string
+        Description:
+          type: string
+        Price:
+          type: number
+          format: float
+        Currency:
+          type: string
+        TrialPeriod:
+          type: integer
+        TrialInterval:
+          type: string
+        GracePeriod:
+          type: integer
+        GraceInterval:
+          type: string
+        InvoicePeriod:
+          type: integer
+        InvoiceInterval:
+          type: string
+        Tier:
+          type: integer
+        StartsAt:
+          type: string
+          format: date-time
+        EndsAt:
+          type: string
+          format: date-time
+        CreatedAt:
+          type: string
+          format: date-time
+        UpdatedAt:
+          type: string
+          format: date-time
+    WithdrawRequest:
+      type: object
+      required:
+        - amount
+        - address
+      properties:
+        amount:
+          type: number
+          format: float
+        address:
+          type: string
+    WalletStrength:
+      type: object
+      required:
+        - wallet_address
+        - vote_power
+      properties:
+        wallet_address:
+          type: string
+          example: "d01p55v08ld8yc0my72ccpsztv7auyxn2tden6yvw"
+        vote_power:
+          type: integer
+          example: 1000000
+security:
+  - BearerAuth: []
