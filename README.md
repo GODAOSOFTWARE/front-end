@@ -37,7 +37,7 @@ GO DAO - это современное веб-приложение, разраб
 - **src/components/Card.js**: Компонент карточки, используется для отображения информации о проектах.
 - **src/components/ConnectButton.tsx**: Компонент кнопки подключения к Web3-сервисам.
 - **src/components/MetaMaskAuth.js**: Компонент для аутентификации через MetaMask.
-- **src/components/Modal.js**: Компонент модального окна.
+- **src/components/SignIn.js**: Компонент модального окна.
 - **src/components/Navbar.js**: Компонент навигационной панели.
 - **src/components/Sidebar.js**: Компонент боковой панели.
 - **src/components/Web3ModalProvider.tsx**: Провайдер Web3Modal для настройки и предоставления Web3-функциональности.

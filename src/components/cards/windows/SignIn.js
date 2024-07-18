@@ -1,6 +1,6 @@
-// src/components/Modal.js
+// src/components/SignIn.js
 
-/// Этот файл определяет компонент модального окна (Modal).
+/// Этот файл определяет компонент модального окна (SignIn).
 /// Модальное окно используется для отображения контента поверх основного приложения.
 /// Модальное окно отображается только в том случае,
 // если оно открыто (проверяется через проп `isOpen`).
@@ -8,7 +8,7 @@
 
 import React from 'react';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const SignIn = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
 
     return (
@@ -23,4 +23,4 @@ const Modal = ({ isOpen, onClose, children }) => {
     );
 };
 
-export default Modal;
+export default SignIn;
