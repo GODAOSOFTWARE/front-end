@@ -8,7 +8,7 @@ import * as React from 'react';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
 import ConnectButton from '../web3/ConnectButton.tsx';
 import Notifications from "../../pages/Notifications";
-import Profile from "../../pages/Profile";
+import SignIn from "../../pages/SignIn";
 
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
                     className="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-200"
                 />
                 <FaBell className="text-gray-500 mx-2" /> {Notifications}
-                <FaUserCircle className="text-gray-500 mx-2" /> {Profile}
+                <FaUserCircle className="text-gray-500 mx-2" /> {SignIn}
                 <ConnectButton /> {ConnectButton}
             </div>
         </nav>

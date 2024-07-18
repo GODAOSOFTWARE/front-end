@@ -26,6 +26,7 @@ function App() {
                                     <Route path="/profile" element={<Profile />} />
                                     <Route path="/votes" element={<Members />} />
                                     <Route path="/notifications" element={<Notifications />} />
+                                    <Route path="/sign-in" element={<SignIn />} />
                                 </Routes>
                             </main>
                         </div>
