@@ -19,7 +19,7 @@ const VoteCard = ({ title, description, image, voteNumber, members }) => {
                 <p className="text-gray-600">{description}</p>
             </div>
             <div className="flex items-center justify-between">
-                <button className="bg-white text-gray-800 border border-gray-800 py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-white">Подробнее</button>
+                <button className="bg-gray text-black-800 border border-white-100 py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-white">Подробнее</button>
                 <div className="flex -space-x-2">
                     {members.map((member, index) => (
                         <img
