@@ -100,6 +100,7 @@
     font-size: 16px;
     background-color: #2d3748;
     color: white;
+    margin-left: -100px; /* Сдвиг поля поиска на 40 пикселей влево */
 }
 
 .search-input::placeholder {
