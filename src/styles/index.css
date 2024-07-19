@@ -24,4 +24,10 @@ code {
 /* Фон для рабочей области */
 .main-content {
     background-color: #F5F7F8; /* Светло-серый цвет */
+    margin-left: 300px; /* Светло-серый цвет */
 }
+
+.content-margin {
+    margin-left: 1rem; /* Задаем отступ слева */
+}
+
