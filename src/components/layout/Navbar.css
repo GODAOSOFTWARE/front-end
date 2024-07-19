@@ -20,7 +20,7 @@
 /* Кнопка Sign In */
 .sign-in-button, .connect-button {
     height: 40px;
-    width: 120px;
+    width: 150px;
     padding: 0 16px;
     background: linear-gradient(to bottom right, #2d3748, #1a202c); /* Градиентный цвет кнопки */
     color: #ffffff;

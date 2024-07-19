@@ -1,0 +1,32 @@
+/* src/components/ConnectButton.css */
+
+/* Контейнер для кнопки */
+.connect-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Кнопка Connect Wallet */
+.connect-button-container w3m-button {
+    height: 40px !important;
+    width: 120px !important;
+    padding: 0 16px !important;
+    background: linear-gradient(to bottom right, #2d3748, #1a202c) !important; /* Градиентный цвет */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 0.75rem !important; /* Скругленные углы */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    transition: background 0.2s, color 0.2s !important;
+}
+
+/* Стили для кнопки при наведении */
+.connect-button-container w3m-button:hover {
+    background: linear-gradient(to bottom right, #1a202c, #2d3748) !important;
+    color: #e2e8f0 !important;
+}

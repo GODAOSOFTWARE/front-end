@@ -1,26 +1,19 @@
-// src/components/ConnectButton.tsx
+// src/components/web3/ConnectButton.tsx
 
-/// Этот файл определяет компонент кнопки подключения (ConnectButton).
-/// Кнопка используется для подключения к Web3-сервисам.
-/// Кнопка обернута в элемент `w3m-button`, который предоставляет стили
-// и функциональность для подключения.
-
-/// Принцип работы:
-/// 1. Компонент `ConnectButton` использует `w3m-button`,
-// который является встроенным элементом Web3Modal.
-/// 2. При нажатии на кнопку `w3m-button` открывается модальное окно,
-// предоставляемое Web3Modal.
-/// 3. Пользователь может выбрать кошелек для подключения (например, MetaMask).
-/// 4. После успешного подключения Web3Modal управляет состоянием
-// подключения и предоставляет информацию о подключении компоненту `ConnectButton`.
-
-
-import React from 'react';
+import React, { useState } from 'react';
+import WalletConnectModal from '../cards/windows/authModals/WalletConnectModal';
+import './ConnectButton.css';
 
 const ConnectButton: React.FC = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
+
     return (
         <div className="mx-2">
-            <w3m-button className="py-2 px-4 rounded-lg"></w3m-button>
+            <button className="sign-in-button" onClick={openModal}>Connect Wallet</button>
+            <WalletConnectModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 };
