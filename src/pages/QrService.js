@@ -1,12 +1,12 @@
-// src/pages/Profile.js
+// src/pages/QrService.js
 
-/// Этот файл определяет страницу профиля пользователя (Profile).
+/// Этот файл определяет страницу профиля пользователя (QrService).
 /// Страница профиля отображает информацию о пользователе.
 /// Включает заголовок и текст с информацией о пользователе.
-
+///
 import React from 'react';
 
-const Profile = () => {
+const QrService = () => {
     return (
         <div>
             <h1 className="text-2xl font-bold">Сервис для выпуска QR кодов</h1>
@@ -15,4 +15,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default QrService;

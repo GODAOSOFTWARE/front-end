@@ -1,15 +1,7 @@
-// src/pages/SignIn.js
-
-/// Этот файл определяет страницу входа (SignIn).
-/// Страница входа позволяет пользователю выбрать метод аутентификации:
-// через электронную почту, Google или MetaMask.
-/// Форма включает поле для ввода электронной почты
-// и кнопки для выбора метода аутентификации.
-/// При выборе MetaMask отображается компонент MetaMaskAuth.
-
 import React, { useState } from 'react';
 import MetaMaskAuth from '../components/web3/MetaMaskAuth';
 
+///
 const SignIn = () => {
     const [authMethod, setAuthMethod] = useState(null);
 
