@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.content-margin {
+    margin-left: 1rem; /* Задаем отступ слева */
+}
+
 /* Дополнительные стили */
 body {
     margin: 0;
