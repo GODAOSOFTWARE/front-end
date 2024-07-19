@@ -52,7 +52,7 @@ const Dashboard = () => {
                 <h1 className="text-2xl font-bold">Активные голосования</h1>
                 <button className="bg-white text-gray-800 bg-white p-6 shadow-md rounded-lg flex flex-col py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-white">Создать голосование</button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 content-margin"> {/* Применен класс content-margin */}
                 {cardsData.map((card, index) => (
                     <VoteCard
                         key={index}

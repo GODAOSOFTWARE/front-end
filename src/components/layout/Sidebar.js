@@ -1,43 +1,37 @@
-// src/components/Sidebar.js
-
-/// Этот файл определяет компонент боковой панели (Sidebar).
-/// Боковая панель содержит ссылки на разные страницы приложения,
-// такие как панель управления,профиль и таблицы.
-// Включает иконки для каждой ссылки, используемые
-// компоненты из библиотеки `react-icons`.
-
+// src/components/layout/Sidebar.js
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUser, FaTable, FaBell } from 'react-icons/fa';
+import { FaHome, FaUser, FaTable } from 'react-icons/fa';
+import './Sidebar.css'; // Подключение CSS файла
 
 const Sidebar = () => {
     return (
-        <div className="bg-white text-gray-800 w-64 min-h-screen shadow-lg">
-            <div className="p-4">
-                <h2 className="text-xl font-bold">DAO Decimal Dapps</h2>
+        <aside className="sidebar">
+            <div className="sidebar-header">
+                <h2 className="sidebar-title">DAO Decimal Dapps</h2>
             </div>
-            <ul className="p-4 space-y-2">
+            <ul className="sidebar-list">
                 <li>
-                    <Link to="/dashboard" className="flex items-center space-x-2 py-2 px-4 rounded-lg hover:bg-gray-100">
-                        <FaHome />
+                    <Link to="/dashboard" className="sidebar-link active-link">
+                        <FaHome className="icon"/>
                         <span>Голосования</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/profile" className="flex items-center space-x-2 py-2 px-4 rounded-lg hover:bg-gray-100">
-                        <FaUser />
+                    <Link to="/profile" className="sidebar-link">
+                        <FaUser className="icon"/>
                         <span>Профиль</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/tables" className="flex items-center space-x-2 py-2 px-4 rounded-lg hover:bg-gray-100">
-                        <FaTable />
+                    <Link to="/tables" className="sidebar-link">
+                        <FaTable className="icon"/>
                         <span>Члены DAO</span>
                     </Link>
                 </li>
             </ul>
-        </div>
+        </aside>
     );
 };
 

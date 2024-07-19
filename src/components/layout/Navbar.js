@@ -19,7 +19,6 @@ const Navbar = () => {
                     placeholder="Search"
                     className="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-200"
                 />
-                <FaBell className="text-gray-500 mx-2" /> {Notifications}
                 <div className="avatar-container mx-2">
                     <img src={avatarUrl} alt="User Avatar" className="avatar-icon" />
                 </div>
