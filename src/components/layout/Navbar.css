@@ -1,5 +1,56 @@
 /* src/components/layout/Navbar.css */
 
+/* Основной контейнер навигационной панели */
+.navbar {
+    width: 100%;
+    background-color: #1a202c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для элементов навигационной панели */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Логотип */
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Контейнер для меню */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Элементы меню */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+    color: royalblue;
+}
+
+/* Контейнер для действий (аватарка и кнопки) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 /* Контейнер для аватарки пользователя */
 .avatar-container {
     height: 40px;
@@ -21,8 +72,8 @@
 .sign-in-button, .connect-button {
     height: 40px;
     width: 150px;
-    padding: 3 16px;
-    background: linear-gradient(to bottom right, #2d3748, #1a202c); /* Градиентный цвет кнопки */
+    padding: 3px 16px;
+    background: linear-gradient(to bottom right, #2d3748, #1a202c);
     color: #ffffff;
     border: none;
     border-radius: 4px;
