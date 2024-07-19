@@ -1,61 +1,42 @@
+/* src/components/layout/Navbar.css */
+
 /* Контейнер для аватарки пользователя */
 .avatar-container {
-    /* Высота контейнера аватарки */
     height: 40px;
-    /* Ширина контейнера аватарки */
     width: 40px;
-    /* Используем flexbox для выравнивания */
     display: flex;
-    /* Вертикальное выравнивание по центру */
     align-items: center;
-    /* Горизонтальное выравнивание по центру */
     justify-content: center;
-    /* Сделать контейнер круглым */
     border-radius: 50%;
-    /* Скрыть часть изображения за границами круга */
     overflow: hidden;
 }
 
 /* Изображение аватарки пользователя */
 .avatar-icon {
-    /* Высота изображения равна высоте контейнера */
     height: 100%;
-    /* Автоматическая ширина для сохранения пропорций */
     width: auto;
 }
 
-/* Кнопка Sign In*/
+/* Кнопка Sign In */
 .sign-in-button, .connect-button {
-    /* Высота кнопки */
     height: 40px;
-    /* Ширина кнопки */
     width: 120px;
-    /* Внутренний отступ для кнопки по горизонтали */
     padding: 0 16px;
-    /* Цвет кнопки */
-    background-color: #2563eb;
-    /* Цвет текста кнопки */
+    background: linear-gradient(to bottom right, #2d3748, #1a202c); /* Градиентный цвет кнопки */
     color: #ffffff;
-    /* Без рамки */
     border: none;
-    /* Скругленные углы */
-    border-radius: 4px;
-    /* Используем flexbox для выравнивания */
+    border-radius: 0.75rem; /* Скругленные углы */
     display: flex;
-    /* Вертикальное выравнивание по центру */
     align-items: center;
-    /* Горизонтальное выравнивание по центру */
     justify-content: center;
-    /* Курсор в виде руки при наведении */
     cursor: pointer;
-    /* Размер шрифта */
     font-size: 16px;
-    /* Центрирование текста */
     text-align: center;
+    transition: background 0.2s, color 0.2s;
 }
 
 /* Стили для кнопок при наведении */
 .sign-in-button:hover, .connect-button:hover {
-    /* Цвет кнопки при наведении */
-    background-color: black;
+    background: linear-gradient(to bottom right, #1a202c, #2d3748);
+    color: #e2e8f0;
 }

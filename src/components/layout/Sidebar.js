@@ -9,7 +9,7 @@ const Sidebar = () => {
     return (
         <aside className="sidebar">
             <div className="sidebar-header">
-                <h2 className="sidebar-title">DAO Decimal Dapps</h2>
+                <h2 className="sidebar-title">Go DAO Software</h2>
             </div>
             <ul className="sidebar-list">
                 <li>
@@ -21,7 +21,7 @@ const Sidebar = () => {
                 <li>
                     <Link to="/profile" className="sidebar-link">
                         <FaUser className="icon"/>
-                        <span>Профиль</span>
+                        <span>Члены DAO</span>
                     </Link>
                 </li>
                 <li>
