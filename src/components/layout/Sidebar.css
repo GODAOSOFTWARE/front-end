@@ -5,15 +5,18 @@
     background: linear-gradient(to bottom right, #2d3748, #1a202c);
     transform: translateX(0);
     position: fixed;
-    inset: 0;
+    top: 85px; /* Задаем отступ от верхнего края */
+    left: 16px; /* Задаем отступ от левого края */
+    right: 16px; /* Задаем отступ от правого края */
+    bottom: 16px; /* Задаем отступ от нижнего края */
     z-index: 50;
-    margin: 16px;
-    height: calc(100vh - 32px);
+    height: calc(100vh - 48px); /* Учитываем новый верхний отступ в высоте */
     width: 18rem;
     border-radius: 0.75rem;
     transition: transform 0.3s;
     border: 1px solid #cbd5e0;
 }
+
 
 /* Заголовок боковой панели */
 .sidebar-header {

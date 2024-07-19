@@ -1,7 +1,4 @@
-// src/components/layout/Navbar.js
-
 import * as React from 'react';
-import { FaBell } from 'react-icons/fa';
 import ConnectButton from '../web3/ConnectButton';
 import './Navbar.css';
 
