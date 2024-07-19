@@ -4,26 +4,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaUser, FaTable } from 'react-icons/fa';
 import './Sidebar.css'; // Подключение CSS файла
+import { IoQrCodeOutline } from 'react-icons/io5';
+import { MdHowToVote } from "react-icons/md";
+
 
 const Sidebar = () => {
     return (
         <aside className="sidebar">
-            <div className="sidebar-header">
-                <h2 className="sidebar-title">Go DAO Software</h2>
-            </div>
             <ul className="sidebar-list">
                 <li>
                     <Link to="/dashboard" className="sidebar-link active-link">
-                        <FaHome className="icon"/>
+                        <MdHowToVote className="icon"/>
                         <span>Голосования</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/profile" className="sidebar-link">
-                        <FaUser className="icon"/>
-                        <span>Члены DAO</span>
+                        <IoQrCodeOutline className="icon"/>
+                        <span>QR Коды</span>
                     </Link>
                 </li>
+
                 <li>
                     <Link to="/tables" className="sidebar-link">
                         <FaTable className="icon"/>
