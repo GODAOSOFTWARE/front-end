@@ -1,5 +1,4 @@
 import * as React from 'react';
-import ConnectButton from '../web3/ConnectButton';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -18,7 +17,6 @@ const Navbar = () => {
                     <div className="avatar-container">
                         <img src={avatarUrl} alt="User Avatar" className="avatar-icon" />
                     </div>
-                    <ConnectButton />
                     <button className="sign-in-button">Личный кабинет</button>
                 </div>
             </div>

@@ -1,20 +1,14 @@
 // src/components/web3/ConnectButton.tsx
-
-import React, { useState } from 'react';
-import WalletConnectModal from '../cards/windows/authModals/WalletConnectModal';
-import './ConnectButton.css';
+import React from 'react';
+import { useWeb3Modal } from '@web3modal/wagmi/react';
 
 const ConnectButton: React.FC = () => {
-    const [isModalOpen, setModalOpen] = useState(false);
-
-    const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+    const { open } = useWeb3Modal();
 
     return (
-        <div className="mx-2">
-            <button className="sign-in-button" onClick={openModal}>Модуль WEB3</button>
-            <WalletConnectModal isOpen={isModalOpen} onClose={closeModal} />
-        </div>
+        <button onClick={() => open()}>
+            Connect Wallet
+        </button>
     );
 };
 

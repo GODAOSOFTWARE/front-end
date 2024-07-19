@@ -1,11 +1,4 @@
-// src/components/Web3ModalProvider.tsx
-
-/// Этот файл определяет провайдер Web3Modal (Web3ModalProvider).
-/// Провайдер используется для настройки и предоставления
-// Web3-функциональности всем дочерним компонентам.
-/// Компонент использует библиотеки wag mi и react-query
-// для настройки Web3 и управления состоянием.
-
+// src/components/web3/Web3ModalProvider.tsx
 import * as React from 'react';
 import { createWeb3Modal } from '@web3modal/wagmi/react';
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config';
@@ -14,7 +7,7 @@ import { arbitrum, mainnet } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
-const projectId = '6de755e98304adc1e36a371e36db0f7b'; // Замените на ваш project ID от WalletConnect
+const projectId = '6de755e98304adc1e36a371e36db0f7b'; // Ваш project ID от WalletConnect
 
 const metadata = {
     name: 'GO DAO VOTE',
