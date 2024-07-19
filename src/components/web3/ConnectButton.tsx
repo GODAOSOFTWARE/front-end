@@ -12,7 +12,7 @@ const ConnectButton: React.FC = () => {
 
     return (
         <div className="mx-2">
-            <button className="sign-in-button" onClick={openModal}>Connect Wallet</button>
+            <button className="sign-in-button" onClick={openModal}>Модуль WEB3</button>
             <WalletConnectModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );

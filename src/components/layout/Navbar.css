@@ -21,22 +21,20 @@
 .sign-in-button, .connect-button {
     height: 40px;
     width: 150px;
-    padding: 0 16px;
+    padding: 3 16px;
     background: linear-gradient(to bottom right, #2d3748, #1a202c); /* Градиентный цвет кнопки */
     color: #ffffff;
     border: none;
-    border-radius: 0.75rem; /* Скругленные углы */
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 16px;
     text-align: center;
-    transition: background 0.2s, color 0.2s;
 }
 
 /* Стили для кнопок при наведении */
 .sign-in-button:hover, .connect-button:hover {
-    background: linear-gradient(to bottom right, #1a202c, #2d3748);
-    color: #e2e8f0;
+    background: royalblue;
 }
