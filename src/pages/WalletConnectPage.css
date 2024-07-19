@@ -1,23 +1,59 @@
 /* src/pages/WalletConnectPage.css */
+
 .wallet-connect-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f2f5;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.wallet-connect-container button {
-    padding: 10px 20px;
+.wallet-connect-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1a202c;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.description {
     font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #1a202c;
-    color: white;
-    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    color: #666;
 }
 
-.wallet-connect-container button:hover {
-    background-color: #2d3748;
+.business-benefits {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.terms {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.terms a {
+    color: #1a202c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms a:hover {
+    text-decoration: underline;
 }
