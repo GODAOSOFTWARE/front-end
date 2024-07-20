@@ -12,6 +12,7 @@ const Sidebar = () => {
     return (
         <aside className="sidebar">
             <ul className="sidebar-list">
+                <div className="logo">Сервисы</div>
                 <li>
                     <Link to="/dashboard" className="sidebar-link active-link">
                         <MdHowToVote className="icon"/>
