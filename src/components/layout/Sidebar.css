@@ -55,9 +55,9 @@
 
 /* Активная ссылка */
 .active-link {
-    background: linear-gradient(to top right, #1a202c, #2d3748);
+    background: #F0B90B;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #F0B90B;
+    color: black;
 }
 
 /* Иконки ссылок */
@@ -69,5 +69,6 @@
 /* Стили для ссылок при наведении */
 .sidebar-link:hover {
     background: rgba(255, 255, 255, 0.1);
+    color: white;
 
 }
