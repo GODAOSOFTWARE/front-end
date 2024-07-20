@@ -1,7 +1,4 @@
 // src/API/AuthAPI.js
-
-
-
 const API_URL = 'http://localhost:8080'; // URL для локального тестирования
 
 export const login = async (credentials) => {
