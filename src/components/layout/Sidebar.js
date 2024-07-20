@@ -2,10 +2,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUser, FaTable } from 'react-icons/fa';
 import './Sidebar.css'; // Подключение CSS файла
 import { IoQrCodeOutline } from 'react-icons/io5';
 import { MdHowToVote } from "react-icons/md";
+import { FaRegAddressCard } from "react-icons/fa6";
+import { GiMining } from "react-icons/gi";
+import { GiParachute } from "react-icons/gi";
+
 
 
 const Sidebar = () => {
@@ -28,8 +31,20 @@ const Sidebar = () => {
 
                 <li>
                     <Link to="/tables" className="sidebar-link">
-                        <FaTable className="icon"/>
-                        <span>Члены DAO</span>
+                        <FaRegAddressCard className="icon"/>
+                        <span>Статусы</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/tables" className="sidebar-link">
+                        <GiMining className="icon"/>
+                        <span>Фарминг</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/tables" className="sidebar-link">
+                        <GiParachute className="icon"/>
+                        <span>Промо Акции</span>
                     </Link>
                 </li>
             </ul>

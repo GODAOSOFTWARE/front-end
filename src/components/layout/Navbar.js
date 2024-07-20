@@ -25,7 +25,7 @@ const Navbar = () => {
                         <img src={avatarUrl} alt="User Avatar" className="avatar-icon" />
                     </div>
                     <button className="sign-in-button" onClick={handleSignInClick}>
-                        Личный кабинет
+                       Начать работу
                     </button>
                 </div>
             </div>
