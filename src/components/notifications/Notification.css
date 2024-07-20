@@ -1,0 +1,38 @@
+.notification {
+    position: fixed;
+    width: 400px; /* Ширина 300 пикселей */
+    height: 100px; /* Высота 150 пикселей */
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.notification.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification .progress {
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.notification .progress-bar {
+    height: 100%;
+    background-color: #76c7c0;
+    width: 100%;
+    transition: width 2s linear;
+}

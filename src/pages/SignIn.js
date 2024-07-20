@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import MetaMaskAuth from '../components/web3/MetaMaskAuth';
 import { login } from '../api/AuthAPI';
+import Notification from '../components/notifications/Notification';  // Импортируем компонент уведомления
 
 const SignIn = () => {
+    const navigate = useNavigate();
     const [authMethod, setAuthMethod] = useState(null);
     const [credentials, setCredentials] = useState({ login: '', password: '', device_name: 'web' });
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [showNotification, setShowNotification] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -26,15 +30,18 @@ const SignIn = () => {
         setError('');
         setSuccess('');
         try {
-            const data = await login(credentials); // Использование функции login
+            const data = await login(credentials);
 
             if (data.token) {
-                // Логирование ответа сервера
                 console.log('Ответ сервера:', data);
-                // Сохранение токена в localStorage
                 localStorage.setItem('authToken', data.token);
-                // Показ успешного сообщения
-                setSuccess('Авторизация успешна');
+                setSuccess('Авторизация успешна. Вы будете перенаправлены на страницу дашборда.');
+                setShowNotification(true);
+
+                // Уведомление перед редиректом
+                setTimeout(() => {
+                    navigate('/dashboard');
+                }, 2000);
             } else {
                 setError('Не удалось получить токен');
             }
@@ -125,6 +132,13 @@ const SignIn = () => {
                         {authMethod === 'metamask' && <MetaMaskAuth onClose={closeAuth} />}
                         <button onClick={closeAuth} className="mt-4">Назад</button>
                     </div>
+                )}
+                {showNotification && (
+                    <Notification
+                        message="Авторизация успешна. Вы будете перенаправлены на страницу дашборда."
+                        duration={2000}  // Продолжительность в миллисекундах
+                        onEnd={() => setShowNotification(false)}
+                    />
                 )}
             </div>
         </div>
