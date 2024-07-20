@@ -7,12 +7,14 @@
     background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: 18rem;
+    padding: 0.5rem;
+    width: 220px; /* Ширина 300 пикселей */
+    height: 120px; /* Высота 150 пикселей */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 
 .card-icon {
     background-color: #333;
@@ -24,6 +26,7 @@
     justify-content: center;
     border-radius: 0.5rem;
     font-size: 1.5rem;
+    margin-right: 10px!important; /* Добавлено */
 }
 
 .card-content h2 {

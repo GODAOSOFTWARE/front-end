@@ -1,12 +1,13 @@
 import React from 'react';
-import './DashBoard.css';
+import './DashBoard.css';  // Подключаем стили
+
 import { FaMoneyBillAlt, FaUserFriends, FaUserPlus, FaChartLine } from 'react-icons/fa';
 
 const Dashboard = () => {
     const data = [
-        { title: "Today's Money", value: "$53k", percentage: "+55%", icon: <FaMoneyBillAlt /> },
-        { title: "Today's Users", value: "2,300", percentage: "+3%", icon: <FaUserFriends /> },
-        { title: "New Clients", value: "3,462", percentage: "-2%", icon: <FaUserPlus /> },
+        { title: "Ликвидность пула", value: "$540k", percentage: "+2%", icon: <FaMoneyBillAlt /> },
+        { title: "Члены DAO", value: "120", percentage: "+3%", icon: <FaUserFriends /> },
+        { title: "Голосования", value: "3", percentage: "-2%", icon: <FaUserPlus /> },
         { title: "Sales", value: "$103,430", percentage: "+5%", icon: <FaChartLine /> }
     ];
 
