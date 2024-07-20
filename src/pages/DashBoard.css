@@ -1,69 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    margin: 0;
-    padding: 0;
-}
-
-.dashboard {
+.dashboard-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    gap: 1rem;
 }
 
 .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 18rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 10px;
-    flex: 1 0 21%; /* Responsive layout */
-    max-width: 23%;
-    min-width: 200px;
-    text-align: center;
+    justify-content: space-between;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.icon-container {
+.card-icon {
+    background-color: #333;
+    color: white;
+    width: 3rem;
+    height: 3rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    background-color: #333; /* Темный фон */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
 }
 
-.icon {
-    font-size: 1.5em;
-    color: #fff; /* Белый цвет иконок */
-}
-
-.details {
-    margin-left: 15px;
-}
-
-.details p {
+.card-content h2 {
     margin: 0;
-    font-size: 1em;
-    color: #888;
+    font-size: 1rem;
+    color: #666;
 }
 
-.details h3 {
-    margin: 5px 0;
-    font-size: 1.5em;
-    color: #333;
+.card-content p {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-.details span {
-    font-size: 0.875em;
-    color: #4caf50; /* Зеленый цвет для положительных изменений */
+.card-content span {
+    color: green; /* или красный, если отрицательный процент */
+    font-size: 0.875rem;
 }

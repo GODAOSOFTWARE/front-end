@@ -1,62 +1,29 @@
 import React from 'react';
-import './DashBoard.css'; // Убедитесь, что файл называется DashBoard.css
-import { FaMoneyBillWave, FaUsers, FaUserPlus, FaChartLine } from 'react-icons/fa'; // Импорт иконок из библиотеки react-icons
+import './DashBoard.css';
+import { FaMoneyBillAlt, FaUserFriends, FaUserPlus, FaChartLine } from 'react-icons/fa';
 
-const DashBoard = () => {
+const Dashboard = () => {
+    const data = [
+        { title: "Today's Money", value: "$53k", percentage: "+55%", icon: <FaMoneyBillAlt /> },
+        { title: "Today's Users", value: "2,300", percentage: "+3%", icon: <FaUserFriends /> },
+        { title: "New Clients", value: "3,462", percentage: "-2%", icon: <FaUserPlus /> },
+        { title: "Sales", value: "$103,430", percentage: "+5%", icon: <FaChartLine /> }
+    ];
+
     return (
-        <div className="p-6 dashboard">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                <div className="card bg-white p-4 rounded-lg shadow-md">
-                    <div className="flex items-center">
-                        <div className="icon-container bg-gray-800 p-3 rounded-full">
-                            <FaMoneyBillWave className="icon text-white" />
-                        </div>
-                        <div className="details ml-4">
-                            <h5 className="text-gray-500">Today's Money</h5>
-                            <h3 className="text-lg font-semibold">$53k</h3>
-                            <p className="text-green-500">+55% чем на прошлой неделе</p>
-                        </div>
+        <div className="dashboard-container">
+            {data.map((item, index) => (
+                <div className="card" key={index}>
+                    <div className="card-icon">{item.icon}</div>
+                    <div className="card-content">
+                        <h2>{item.title}</h2>
+                        <p>{item.value}</p>
+                        <span>{item.percentage} than last month</span>
                     </div>
                 </div>
-                <div className="card bg-white p-4 rounded-lg shadow-md">
-                    <div className="flex items-center">
-                        <div className="icon-container bg-gray-800 p-3 rounded-full">
-                            <FaUsers className="icon text-white" />
-                        </div>
-                        <div className="details ml-4">
-                            <h5 className="text-gray-500">Today's Users</h5>
-                            <h3 className="text-lg font-semibold">2,300</h3>
-                            <p className="text-green-500">+3% чем в прошлом месяце</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="card bg-white p-4 rounded-lg shadow-md">
-                    <div className="flex items-center">
-                        <div className="icon-container bg-gray-800 p-3 rounded-full">
-                            <FaUserPlus className="icon text-white" />
-                        </div>
-                        <div className="details ml-4">
-                            <h5 className="text-gray-500">New Clients</h5>
-                            <h3 className="text-lg font-semibold">3,462</h3>
-                            <p className="text-red-500">-2% чем вчера</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="card bg-white p-4 rounded-lg shadow-md">
-                    <div className="flex items-center">
-                        <div className="icon-container bg-gray-800 p-3 rounded-full">
-                            <FaChartLine className="icon text-white" />
-                        </div>
-                        <div className="details ml-4">
-                            <h5 className="text-gray-500">Sales</h5>
-                            <h3 className="text-lg font-semibold">$103,430</h3>
-                            <p className="text-green-500">+5% чем вчера</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            ))}
         </div>
     );
 };
 
-export default DashBoard;
+export default Dashboard;
