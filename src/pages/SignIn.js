@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import MetaMaskAuth from '../components/web3/MetaMaskAuth';
+import { login } from '../api/AuthAPI';
 
 const SignIn = () => {
     const [authMethod, setAuthMethod] = useState(null);
+    const [credentials, setCredentials] = useState({ login: '', password: '', device_name: 'web' });
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setCredentials({ ...credentials, [name]: value });
+    };
 
     const handleAuthMethod = (method) => {
         setAuthMethod(method);
@@ -10,6 +19,43 @@ const SignIn = () => {
 
     const closeAuth = () => {
         setAuthMethod(null);
+    };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        setError('');
+        setSuccess('');
+        try {
+            const response = await fetch('http://localhost:8080/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(credentials),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Логирование ответа сервера
+                console.log('Ответ сервера:', data);
+                if (data.token) {
+                    // Сохранение токена в localStorage
+                    localStorage.setItem('authToken', data.token);
+                    // Показ успешного сообщения
+                    setSuccess('Авторизация успешна');
+                } else {
+                    setError('Не удалось получить токен');
+                }
+            } else {
+                // Показ сообщения об ошибке
+                setError('Неверный логин или пароль');
+            }
+        } catch (error) {
+            console.error('Ошибка входа:', error);
+            setError('Ошибка входа');
+        }
     };
 
     return (
@@ -20,17 +66,20 @@ const SignIn = () => {
                     Новый способ управления организациями и сообществами в мире децентрализации.
                 </p>
                 {!authMethod ? (
-                    <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                    <form className="space-y-6" onSubmit={handleLogin}>
                         <div>
-                            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                                Адрес электронной почты
+                            <label htmlFor="login" className="block text-gray-700 text-sm font-bold mb-2">
+                                Логин
                             </label>
                             <input
-                                type="email"
-                                id="email"
+                                type="text"
+                                id="login"
+                                name="login"
+                                value={credentials.login}
+                                onChange={handleInputChange}
                                 required
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                placeholder="name@mail.com"
+                                placeholder="Логин"
                             />
                         </div>
                         <div>
@@ -40,6 +89,9 @@ const SignIn = () => {
                             <input
                                 type="password"
                                 id="password"
+                                name="password"
+                                value={credentials.password}
+                                onChange={handleInputChange}
                                 required
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Ваш пароль"
@@ -61,6 +113,8 @@ const SignIn = () => {
                         >
                             Начать работу
                         </button>
+                        {error && <p className="text-red-500 text-xs mt-4">{error}</p>}
+                        {success && <p className="text-green-500 text-xs mt-4">{success}</p>}
                         <div className="flex flex-col gap-2">
                             <button
                                 type="button"
