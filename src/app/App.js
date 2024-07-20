@@ -8,7 +8,7 @@ import QrService from '../pages/QrService';
 import AirdropService from '../pages/AirdropService';
 import Notifications from '../pages/Notifications';
 import SignIn from '../pages/SignIn';
-import DashBoard from '../pages/Dashboard';
+import DashBoard from '../pages/DashBoard';
 import WalletConnectPage from '../pages/WalletConnectPage';
 import StatusService from '../pages/StatusService';
 import FarmingService from '../pages/FarmingService';
