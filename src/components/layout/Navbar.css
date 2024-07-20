@@ -66,13 +66,13 @@
     width: auto;
 }
 
-/* Кнопка Sign In */
-.sign-in-button, .connect-button {
+/* Кнопка Sign In и Выйти */
+.sign-in-button, .sign-out-button, .connect-button {
     height: 40px;
     padding: 0 16px; /* Внутренние отступы */
     min-width: 150px; /* Минимальная ширина */
     background: white; /* Цвет фона */
-    color:#000000; /* Цвет шрифта */
+    color: #000000; /* Цвет шрифта */
     border: none;
     border-radius: 10px;
     display: flex;
@@ -87,7 +87,7 @@
 }
 
 /* Стили для кнопок при наведении */
-.sign-in-button:hover, .connect-button:hover {
+.sign-in-button:hover, .sign-out-button:hover, .connect-button:hover {
     background: #F0B90B;
     color: black; /* Цвет шрифта при наведении */
 }
@@ -102,7 +102,7 @@
     font-size: 16px;
     background-color: #2d3748;
     color: white;
-    margin-left: -100px; /* Сдвиг поля поиска на 40 пикселей влево */
+    margin-left: -100px; /* Сдвиг поля поиска на 100 пикселей влево */
 }
 
 .search-input::placeholder {

@@ -1,6 +1,6 @@
-// src/components/layout/Navbar.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import AuthChecker from '../cheker/AuthChecker'; // Импортируем компонент AuthChecker
 import './Navbar.css';
 
 const Navbar = () => {
@@ -11,25 +11,40 @@ const Navbar = () => {
         navigate('/sign-in');
     };
 
+    const handleLogoutClick = () => {
+        localStorage.removeItem('authToken');
+        navigate('/sign-in');
+    };
+
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
-                <div className="logo"></div>
-                <div className="actions">
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        className="search-input"
-                    />
-                    <div className="avatar-container">
-                        <img src={avatarUrl} alt="User Avatar" className="avatar-icon" />
+        <AuthChecker>
+            {(isAuthenticated) => (
+                <nav className="navbar">
+                    <div className="navbar-container">
+                        <div className="logo"></div>
+                        <div className="actions">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                className="search-input"
+                            />
+                            <div className="avatar-container">
+                                <img src={avatarUrl} alt="User Avatar" className="avatar-icon" />
+                            </div>
+                            {isAuthenticated ? (
+                                <button className="sign-out-button" onClick={handleLogoutClick}>
+                                    Выйти
+                                </button>
+                            ) : (
+                                <button className="sign-in-button" onClick={handleSignInClick}>
+                                    Начать работу
+                                </button>
+                            )}
+                        </div>
                     </div>
-                    <button className="sign-in-button" onClick={handleSignInClick}>
-                       Начать работу
-                    </button>
-                </div>
-            </div>
-        </nav>
+                </nav>
+            )}
+        </AuthChecker>
     );
 };
 
