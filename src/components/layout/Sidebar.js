@@ -9,7 +9,7 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
-import { TbInfoHexagon } from "react-icons/tb";
+import { IoIosHome } from "react-icons/io";
 
 
 const Sidebar = () => {
@@ -19,7 +19,7 @@ const Sidebar = () => {
                 <div className="logo">Сервисы</div>
                 <li>
                     <Link to="/dashboard" className="sidebar-link">
-                        <TbInfoHexagon className="icon"/>
+                        <IoIosHome className="icon"/>
                         <span>Дашборд</span>
                     </Link>
                 </li>
