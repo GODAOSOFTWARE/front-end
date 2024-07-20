@@ -9,7 +9,7 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
-
+import { TbInfoHexagon } from "react-icons/tb";
 
 
 const Sidebar = () => {
@@ -18,32 +18,38 @@ const Sidebar = () => {
             <ul className="sidebar-list">
                 <div className="logo">Сервисы</div>
                 <li>
-                    <Link to="/dashboard" className="sidebar-link active-link">
+                    <Link to="/dashboard" className="sidebar-link">
+                        <TbInfoHexagon className="icon"/>
+                        <span>Дашборд</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/votes" className="sidebar-link">
                         <MdHowToVote className="icon"/>
                         <span>Голосования</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/profile" className="sidebar-link">
+                    <Link to="/cashback" className="sidebar-link">
                         <IoQrCodeOutline className="icon"/>
                         <span>QR Коды</span>
                     </Link>
                 </li>
 
                 <li>
-                    <Link to="/tables" className="sidebar-link">
+                    <Link to="/status" className="sidebar-link">
                         <FaRegAddressCard className="icon"/>
                         <span>Статусы</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/tables" className="sidebar-link">
+                    <Link to="/farming" className="sidebar-link">
                         <GiMining className="icon"/>
                         <span>Фарминг</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/tables" className="sidebar-link">
+                    <Link to="/airdrops" className="sidebar-link">
                         <GiParachute className="icon"/>
                         <span>Промо Акции</span>
                     </Link>

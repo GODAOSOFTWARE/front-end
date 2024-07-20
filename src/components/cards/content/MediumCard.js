@@ -9,7 +9,7 @@
 
 import React from 'react';
 
-const VoteCard = ({ title, description, image, voteNumber, members }) => {
+const MediumCard = ({ title, description, image, voteNumber, members }) => {
     return (
         <div className="bg-white p-6 shadow-md rounded-lg flex flex-col">
             <img src={image} alt={title} className="rounded-lg mb-4 w-full h-40 object-cover" />
@@ -35,4 +35,4 @@ const VoteCard = ({ title, description, image, voteNumber, members }) => {
     );
 };
 
-export default VoteCard;
+export default MediumCard;

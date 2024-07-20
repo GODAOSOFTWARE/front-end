@@ -3,12 +3,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/layout/Sidebar';
 import Navbar from '../components/layout/Navbar';
-import Dashboard from '../pages/Dashboard';
+import Votes from '../pages/Votes';
 import QrService from '../pages/QrService';
-import Members from '../pages/Members';
+import AirdropService from '../pages/AirdropService';
 import Notifications from '../pages/Notifications';
 import SignIn from '../pages/SignIn';
+import DashBoard from '../pages/Dashboard';
 import WalletConnectPage from '../pages/WalletConnectPage';
+import StatusService from '../pages/StatusService';
+import FarmingService from '../pages/FarmingService';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
 
 function App() {
@@ -25,11 +28,14 @@ function App() {
                                 <Navbar />
                                 <main className="p-6 main-content">
                                     <Routes>
-                                        <Route path="/dashboard" element={<Dashboard />} />
-                                        <Route path="/profile" element={<QrService />} />
-                                        <Route path="/votes" element={<Members />} />
+                                        <Route path="/dashboard" element={<DashBoard />} />
+                                        <Route path="/votes" element={<Votes />} />
+                                        <Route path="/cashback" element={<QrService />} />
+                                        <Route path="/airdrops" element={<AirdropService />} />
                                         <Route path="/notifications" element={<Notifications />} />
                                         <Route path="/sign-in" element={<SignIn />} />
+                                        <Route path="/status" element={<StatusService />} />
+                                        <Route path="/farming" element={<FarmingService />} />
                                     </Routes>
                                 </main>
                             </div>
