@@ -8,6 +8,7 @@ import { MdHowToVote } from "react-icons/md";
 import { FaRegAddressCard } from "react-icons/fa6";
 import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
+import { RiNftFill } from "react-icons/ri";
 
 
 
@@ -45,6 +46,12 @@ const Sidebar = () => {
                     <Link to="/tables" className="sidebar-link">
                         <GiParachute className="icon"/>
                         <span>Промо Акции</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/tables" className="sidebar-link">
+                        <RiNftFill className="icon"/>
+                        <span>NFT Маркет</span>
                     </Link>
                 </li>
             </ul>
