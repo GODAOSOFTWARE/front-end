@@ -26,31 +26,17 @@ const SignIn = () => {
         setError('');
         setSuccess('');
         try {
-            const response = await fetch('http://localhost:8080/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify(credentials),
-            });
+            const data = await login(credentials); // Использование функции login
 
-            const data = await response.json();
-
-            if (response.ok) {
+            if (data.token) {
                 // Логирование ответа сервера
                 console.log('Ответ сервера:', data);
-                if (data.token) {
-                    // Сохранение токена в localStorage
-                    localStorage.setItem('authToken', data.token);
-                    // Показ успешного сообщения
-                    setSuccess('Авторизация успешна');
-                } else {
-                    setError('Не удалось получить токен');
-                }
+                // Сохранение токена в localStorage
+                localStorage.setItem('authToken', data.token);
+                // Показ успешного сообщения
+                setSuccess('Авторизация успешна');
             } else {
-                // Показ сообщения об ошибке
-                setError('Неверный логин или пароль');
+                setError('Не удалось получить токен');
             }
         } catch (error) {
             console.error('Ошибка входа:', error);
