@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const handleLogoutClick = () => {
         localStorage.removeItem('authToken');
-        navigate('/sign-in');
+        window.location.reload(); // Перезагружаем страницу для обновления состояния
     };
 
     return (
