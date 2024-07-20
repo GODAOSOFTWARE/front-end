@@ -71,7 +71,7 @@
     height: 40px;
     padding: 0 16px; /* Внутренние отступы */
     min-width: 150px; /* Минимальная ширина */
-    background: #F0B90B; /* Цвет фона */
+    background: white; /* Цвет фона */
     color:#000000; /* Цвет шрифта */
     border: none;
     border-radius: 10px;
@@ -88,8 +88,8 @@
 
 /* Стили для кнопок при наведении */
 .sign-in-button:hover, .connect-button:hover {
-    background: linear-gradient(to bottom right, #2d3748, #1a202c);
-    color: #ffffff; /* Цвет шрифта при наведении */
+    background: #F0B90B;
+    color: black; /* Цвет шрифта при наведении */
 }
 
 /* Стили для поля поиска */
