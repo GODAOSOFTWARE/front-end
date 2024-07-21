@@ -70,8 +70,8 @@
     height: 40px;
     padding: 0 16px; /* Внутренние отступы */
     min-width: 150px; /* Минимальная ширина */
-    background:  linear-gradient(to bottom right, #2d3748, #1a202c); /* Цвет фона */
-    color: white; /* Цвет шрифта */
+    background:  white; /* Цвет фона */
+    color: black; /* Цвет шрифта */
     border: none;
     border-radius: 10px;
     display: flex;
