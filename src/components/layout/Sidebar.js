@@ -26,8 +26,11 @@ const Sidebar = () => {
 
     return (
         <aside className="sidebar">
+            <div className="sidebar-header">
+                <img src="https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" alt="Logo" className="sidebar-logo" />
+                <h2 className="sidebar-title">DAO Decimal Dapps</h2>
+            </div>
             <ul className="sidebar-list">
-                <div className="logo"></div>
                 <li>
                     <Link to="/dashboard" className="sidebar-link">
                         <IoIosHome className="icon"/>
@@ -46,7 +49,6 @@ const Sidebar = () => {
                         <span>QR Коды</span>
                     </Link>
                 </li>
-
                 <li>
                     <Link to="/status" className="sidebar-link">
                         <FaRegAddressCard className="icon"/>

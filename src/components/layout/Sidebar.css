@@ -5,10 +5,10 @@
     background: linear-gradient(to bottom right, #2d3748, #1a202c);
     transform: translateX(0);
     position: fixed;
-    top: 40px; /* Задаем отступ от верхнего края */
-    left: 16px; /* Задаем отступ от левого края */
-    right: 16px; /* Задаем отступ от правого края */
-    bottom: 16px; /* Задаем отступ от нижнего края */
+    top: 40px; /* Отступ от верхнего края */
+    left: 16px; /* Отступ от левого края */
+    right: 16px; /* Отступ от правого края */
+    bottom: 16px; /* Отступ от нижнего края */
     z-index: 50;
     height: calc(100vh - 48px); /* Учитываем новый верхний отступ в высоте */
     width: 18rem;
@@ -22,22 +22,35 @@
 
 /* Заголовок боковой панели */
 .sidebar-header {
-    padding: 24px 32px;
+    padding: 16px 32px; /* Верхний и нижний отступ */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+/* Логотип в заголовке боковой панели */
+.sidebar-logo {
+    width: 60px; /* Ширина логотипа */
+    height: 60px; /* Высота логотипа */
+    border-radius: 50%; /* Круглая форма */
+    margin-bottom: 0 !important;
 }
 
 .sidebar-title {
     font-size: 1rem;
     font-weight: 600;
     color: #ffffff;
+    margin-bottom: 0 !important;
 }
 
 /* Список ссылок боковой панели */
 .sidebar-list {
-    margin: 16px;
+    margin: 0 16px; /* Отступы по бокам */
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.5rem; /* Промежуток между ссылками */
 }
 
 /* Ссылки в боковой панели */
@@ -45,7 +58,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem; /* Внутренний отступ */
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 500;
