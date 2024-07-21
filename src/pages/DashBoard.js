@@ -3,11 +3,11 @@ import './DashBoard.css';  // Подключаем стили
 
 const Dashboard = () => {
     const projects = [
-        { title: "DAO Decimal Dapps", owner: "Alice", activeVotes: 3, completedVotes: 5, members: 4, icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" },
-        { title: "DAO COD", owner: "Bob", activeVotes: 1, completedVotes: 2, members: 2, icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg" },
-        { title: "DAO Decimal Chain", owner: "Charlie", activeVotes: 4, completedVotes: 8, members: 3, icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97" },
-        { title: "DAO Makarovsky", owner: "Dave", activeVotes: 2, completedVotes: 6, members: 5, icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20" },
-        { title: "DAO Школа экспертов", owner: "Eve", activeVotes: 0, completedVotes: 3, members: 1, icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg" },
+        { title: "DAO Decimal Dapps", owner: "Alice", ownerAvatar: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", activeVotes: 3, members: 4, icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" },
+        { title: "DAO COD", owner: "Bob", ownerAvatar: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg", activeVotes: 1, members: 2, icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg" },
+        { title: "DAO Decimal Chain", owner: "Charlie", ownerAvatar: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97", activeVotes: 4, members: 3, icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97" },
+        { title: "DAO Makarovsky", owner: "Dave", ownerAvatar: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20", activeVotes: 2, members: 5, icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20" },
+        { title: "DAO Школа экспертов", owner: "Eve", ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg", activeVotes: 0, members: 1, icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg" },
     ];
 
     const orders = [
@@ -39,9 +39,6 @@ const Dashboard = () => {
                             <th scope="col" className="table-header">
                                 Активные голосования
                             </th>
-                            <th scope="col" className="table-header">
-                                Завершенные голосования
-                            </th>
                         </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
@@ -56,16 +53,21 @@ const Dashboard = () => {
                                     </div>
                                 </td>
                                 <td className="table-cell">
-                                    <div className="text-sm text-gray-900">{project.owner}</div>
+                                    <div className="icon-container">
+                                        <img src={project.ownerAvatar} alt={project.owner} className="owner-avatar"/>
+                                        <div className="text-sm text-gray-900">{project.owner}</div>
+                                    </div>
                                 </td>
                                 <td className="table-cell">
-                                    <div className="text-sm text-gray-900">{project.members} members</div>
+                                    <div className="text-sm text-gray-900">{project.members}</div>
                                 </td>
                                 <td className="table-cell">
-                                    <div className="text-sm text-gray-900">{project.activeVotes}</div>
-                                </td>
-                                <td className="table-cell">
-                                    <div className="text-sm text-gray-900">{project.completedVotes}</div>
+                                    <div className="votes-container">
+                                        {Array(project.activeVotes).fill().map((_, i) => (
+                                            <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="vote" className="vote-icon"/>
+                                        ))}
+                                        <div className="text-sm text-gray-900">{project.activeVotes}</div>
+                                    </div>
                                 </td>
                             </tr>
                         ))}
