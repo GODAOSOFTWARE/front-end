@@ -15,9 +15,10 @@
     border-radius: 0.75rem;
     transition: transform 0.3s;
     color: #F0B90B;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 
 /* Заголовок боковой панели */
 .sidebar-header {
@@ -33,7 +34,6 @@
 
 /* Список ссылок боковой панели */
 .sidebar-list {
-
     margin: 16px;
     display: flex;
     flex-direction: column;
@@ -70,25 +70,9 @@
 .sidebar-link:hover {
     background: rgba(255, 255, 255, 0.1);
     color: white;
-
 }
 
-./* src/components/layout/Sidebar.css */
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-}
-
-.sidebar-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    flex-grow: 1;
-}
-
+/* Кнопки аутентификации */
 .sidebar-auth-buttons {
     display: flex;
     flex-direction: column;
@@ -107,7 +91,6 @@
     border-radius: 5px;
     width: 90%;
     text-align: center;
-
 }
 
 .sign-in-button:hover,

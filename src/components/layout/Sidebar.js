@@ -1,7 +1,7 @@
 // src/components/layout/Sidebar.js
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 import { IoQrCodeOutline } from 'react-icons/io5';
 import { MdHowToVote } from "react-icons/md";
@@ -11,7 +11,6 @@ import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
 import AuthChecker from '../cheker/AuthChecker';
-import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
     const navigate = useNavigate();
