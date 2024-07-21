@@ -1,6 +1,6 @@
 // src/components/layout/Sidebar.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 import { IoQrCodeOutline } from 'react-icons/io5';
@@ -11,6 +11,7 @@ import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
 import AuthChecker from '../cheker/AuthChecker';
+import ConnectButton from '../web3/ConnectButton';
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -86,6 +87,7 @@ const Sidebar = () => {
                         )
                     )}
                 </AuthChecker>
+                <ConnectButton />
             </div>
         </aside>
     );
