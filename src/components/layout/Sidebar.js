@@ -28,7 +28,7 @@ const Sidebar = () => {
     return (
         <aside className="sidebar">
             <ul className="sidebar-list">
-                <div className="logo">Сервисы</div>
+                <div className="logo"></div>
                 <li>
                     <Link to="/dashboard" className="sidebar-link">
                         <IoIosHome className="icon"/>
