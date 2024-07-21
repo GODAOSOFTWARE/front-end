@@ -27,18 +27,10 @@ const Dashboard = () => {
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
                         <tr>
-                            <th scope="col" className="table-header">
-                                Название
-                            </th>
-                            <th scope="col" className="table-header">
-                                Создатель
-                            </th>
-                            <th scope="col" className="table-header">
-                                Участники
-                            </th>
-                            <th scope="col" className="table-header">
-                                Активные голосования
-                            </th>
+                            <th scope="col" className="table-header">Название</th>
+                            <th scope="col" className="table-header">Создатель</th>
+                            <th scope="col" className="table-header">Подтвержденные участники</th>
+                            <th scope="col" className="table-header">Активные голосования</th>
                         </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
@@ -46,27 +38,30 @@ const Dashboard = () => {
                             <tr key={index}>
                                 <td className="table-cell">
                                     <div className="icon-container">
-                                        <img src={project.icon} alt={project.title} className="project-icon"/>
-                                        <div className="text-sm font-medium text-gray-900">
-                                            {project.title}
-                                        </div>
+                                        <img src={project.icon} alt={project.title} className="project-icon" />
+                                        <div className="text-sm font-medium text-gray-900">{project.title}</div>
                                     </div>
                                 </td>
                                 <td className="table-cell">
                                     <div className="icon-container">
-                                        <img src={project.ownerAvatar} alt={project.owner} className="owner-avatar"/>
+                                        <img src={project.ownerAvatar} alt={project.owner} className="owner-avatar" />
                                         <div className="text-sm text-gray-900">{project.owner}</div>
                                     </div>
                                 </td>
                                 <td className="table-cell">
-                                    <div className="text-sm text-gray-900">{project.members}</div>
+                                    <div className="votes-container">
+                                        {Array(5).fill().map((_, i) => (
+                                            <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="vote" className="vote-icon" />
+                                        ))}
+                                        <a href="#" className="text-sm text-blue-500">Показать все</a>
+                                    </div>
                                 </td>
                                 <td className="table-cell">
                                     <div className="votes-container">
-                                        {Array(project.activeVotes).fill().map((_, i) => (
-                                            <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="vote" className="vote-icon"/>
+                                        {Array(5).fill().map((_, i) => (
+                                            <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="vote" className="vote-icon" />
                                         ))}
-                                        <div className="text-sm text-gray-900">{project.activeVotes}</div>
+                                        <a href="#" className="text-sm text-blue-500">Показать все</a>
                                     </div>
                                 </td>
                             </tr>
