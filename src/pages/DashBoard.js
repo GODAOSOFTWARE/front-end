@@ -3,11 +3,11 @@ import './DashBoard.css';  // Подключаем стили
 
 const Dashboard = () => {
     const projects = [
-        { title: "DAO Decimal Dapps", owner: "Alice", ownerAvatar: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", activeVotes: 3, members: 4, icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" },
-        { title: "DAO COD", owner: "Bob", ownerAvatar: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg", activeVotes: 1, members: 2, icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg" },
-        { title: "DAO Decimal Chain", owner: "Charlie", ownerAvatar: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97", activeVotes: 4, members: 3, icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97" },
-        { title: "DAO Makarovsky", owner: "Dave", ownerAvatar: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20", activeVotes: 2, members: 5, icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20" },
-        { title: "DAO Школа экспертов", owner: "Eve", ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg", activeVotes: 0, members: 1, icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg" },
+        { title: "DAO Decimal Dapps", owner: "Константин Медведев", ownerAvatar: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", activeVotes: 3, members: 4, icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" },
+        { title: "DAO COD", owner: "Евгений Краснов", ownerAvatar: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg", activeVotes: 1, members: 2, icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg" },
+        { title: "DAO Decimal Chain", owner: "Анатолий Бердников", ownerAvatar: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97", activeVotes: 4, members: 3, icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97" },
+        { title: "DAO Makarovsky", owner: "Дмитрий Макаровский", ownerAvatar: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20", activeVotes: 2, members: 5, icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20" },
+        { title: "DAO Школа экспертов", owner: "Константин Константинов", ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg", activeVotes: 0, members: 1, icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg" },
     ];
 
     const orders = [
@@ -29,8 +29,8 @@ const Dashboard = () => {
                         <tr>
                             <th scope="col" className="table-header">Название</th>
                             <th scope="col" className="table-header">Создатель</th>
-                            <th scope="col" className="table-header">Подтвержденные участники</th>
-                            <th scope="col" className="table-header">Активные голосования</th>
+                            <th scope="col" className="table-header">Участники</th>
+                            <th scope="col" className="table-header">Голосования</th>
                         </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
@@ -44,21 +44,21 @@ const Dashboard = () => {
                                 </td>
                                 <td className="table-cell">
                                     <div className="icon-container">
-                                        <img src={project.ownerAvatar} alt={project.owner} className="owner-avatar" />
+                                        <img src={project.ownerAvatar} alt={project.owner} className="vote-icon owner-avatar" />
                                         <div className="text-sm text-gray-900">{project.owner}</div>
                                     </div>
                                 </td>
                                 <td className="table-cell">
                                     <div className="votes-container">
-                                        {Array(5).fill().map((_, i) => (
-                                            <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="vote" className="vote-icon" />
+                                        {Array(3).fill().map((_, i) => (
+                                            <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="member" className="vote-icon" />
                                         ))}
                                         <a href="#" className="text-sm text-blue-500">Показать все</a>
                                     </div>
                                 </td>
                                 <td className="table-cell">
                                     <div className="votes-container">
-                                        {Array(5).fill().map((_, i) => (
+                                        {Array(3).fill().map((_, i) => (
                                             <img key={i} src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="vote" className="vote-icon" />
                                         ))}
                                         <a href="#" className="text-sm text-blue-500">Показать все</a>
