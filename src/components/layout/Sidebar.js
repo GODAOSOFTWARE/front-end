@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Sidebar.css'; // Подключение CSS файла
+import './Sidebar.css';
 import { IoQrCodeOutline } from 'react-icons/io5';
 import { MdHowToVote } from "react-icons/md";
 import { FaRegAddressCard } from "react-icons/fa6";
@@ -10,9 +10,21 @@ import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
-
+import AuthChecker from '../cheker/AuthChecker';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+    const navigate = useNavigate();
+
+    const handleSignInClick = () => {
+        navigate('/sign-in');
+    };
+
+    const handleLogoutClick = () => {
+        localStorage.removeItem('authToken');
+        window.location.reload();
+    };
+
     return (
         <aside className="sidebar">
             <ul className="sidebar-list">
@@ -61,6 +73,21 @@ const Sidebar = () => {
                     </Link>
                 </li>
             </ul>
+            <div className="sidebar-auth-buttons">
+                <AuthChecker>
+                    {(isAuthenticated) => (
+                        isAuthenticated ? (
+                            <button className="sign-out-button" onClick={handleLogoutClick}>
+                                Выйти
+                            </button>
+                        ) : (
+                            <button className="sign-in-button" onClick={handleSignInClick}>
+                                Начать работу
+                            </button>
+                        )
+                    )}
+                </AuthChecker>
+            </div>
         </aside>
     );
 };
