@@ -1,19 +1,19 @@
 /* src/components/web3/ConnectButton.css */
 
-.connect-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1a202c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+.w3m-button {
+    --w3m-button-background-color: #4caf50; /* Цвет фона кнопки */
+    --w3m-button-text-color: #ffffff; /* Цвет текста кнопки */
+    --w3m-button-border-color: #388e3c; /* Цвет границы кнопки */
 }
 
-.connect-button:hover {
-    background-color: #f0b90b;
+/* Размеры кнопки можно изменять через масштабирование */
+.w3m-button[size="md"] {
+    font-size: 1000px;
+    padding: 10px 20px;
 }
+
+.w3m-button[size="sm"] {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
