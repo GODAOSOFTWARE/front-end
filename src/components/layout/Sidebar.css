@@ -5,7 +5,7 @@
     background: linear-gradient(to bottom right, #2d3748, #1a202c);
     transform: translateX(0);
     position: fixed;
-    top: 16px; /* Задаем отступ от верхнего края */
+    top: 40px; /* Задаем отступ от верхнего края */
     left: 16px; /* Задаем отступ от левого края */
     right: 16px; /* Задаем отступ от правого края */
     bottom: 16px; /* Задаем отступ от нижнего края */

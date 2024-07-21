@@ -21,7 +21,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-container">
-            <div className="mt-10 space-y-6">
+            <div className="custom-mt space-y-6">
                 <div className="projects-card">
                     <h2 className="text-xl font-semibold mb-4">Список зарегистрированных DAO</h2>
                     <table className="min-w-full divide-y divide-gray-200">
