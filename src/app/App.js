@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/layout/Sidebar';
-import Navbar from '../components/layout/Navbar';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
 
 const Votes = lazy(() => import('../pages/Votes'));
