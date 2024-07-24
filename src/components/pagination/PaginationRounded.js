@@ -12,6 +12,7 @@ const PaginationRounded = ({ count, page, onChange }) => {
                 shape="rounded"
                 variant="outlined"
                 color="primary"
+                backgroundColor="primary"
             />
         </Stack>
     );

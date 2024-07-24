@@ -13,7 +13,7 @@ const Dashboard = () => {
         { title: "DAO COD", owner: "Евгений Краснов", ownerAvatar: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg", activeVotes: 1, members: 2, icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg" },
         { title: "DAO Decimal Chain", owner: "Анатолий Бердников", ownerAvatar: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97", activeVotes: 4, members: 3, icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97" },
         { title: "DAO Makarovsky", owner: "Дмитрий Макаровский", ownerAvatar: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20", activeVotes: 2, members: 5, icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20" },
-        { title: "DAO Школа экспертов", owner: "Константин Константинов", ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Зmp1QHqG3GyMoXroSLWkvbQ.jpg", activeVotes: 0, members: 1, icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDМ7Зmp1QHqG3GyMoXroSLWkvbQ.jpg" },
+
     ];
 
     const activeVotes = [

@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/layout/Sidebar';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
+import CreateDAO from '../pages/CreateDAO'; // Импортируйте новый компонент
 
 const Votes = lazy(() => import('../pages/Votes'));
 const QrService = lazy(() => import('../pages/QrService'));
@@ -36,6 +37,7 @@ function App() {
                                             <Route path="/sign-in" element={<SignIn />} />
                                             <Route path="/status" element={<StatusService />} />
                                             <Route path="/farming" element={<FarmingService />} />
+                                            <Route path="/createDAO" element={<CreateDAO />} />
                                         </Routes>
                                     </main>
                                 </div>

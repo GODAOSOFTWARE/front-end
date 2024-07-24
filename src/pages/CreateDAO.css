@@ -1,0 +1,58 @@
+/* Общий контейнер для страниц дашборда */
+.dashboard-container {
+    padding-right: 15px; /* Добавляет отступ справа в 15 пикселей */
+    padding-left: 300px; /* Оставляем текущий отступ слева */
+    padding-top: 16px; /* Оставляем текущий отступ сверху */
+    padding-bottom: 16px; /* Оставляем текущий отступ снизу */
+}
+
+/* Стили для формы создания DAO */
+.create-dao-container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 auto; /* Центрирование контейнера */
+    width: calc(100% - 330px); /* Учитываем отступы слева и справа */
+    max-width: 900px; /* Максимальная ширина контейнера */
+    position: relative;
+}
+
+.create-dao-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-dao-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-dao-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-dao-container input,
+.create-dao-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.create-dao-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.create-dao-container button:hover {
+    background-color: #005bb5;
+}
