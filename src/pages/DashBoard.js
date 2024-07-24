@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DashBoard.css';  // Подключаем стили
+import PaginationRounded from '../components/pagination/PaginationRounded';  // Обновляем путь импорта
 
 const Dashboard = () => {
+    const [projectPage, setProjectPage] = useState(1);
+    const [votePage, setVotePage] = useState(1);
+    const projectsPerPage = 5;
+    const votesPerPage = 5;
+
     const projects = [
         {
             title: "DAO Decimal Dapps",
@@ -38,10 +44,10 @@ const Dashboard = () => {
         {
             title: "DAO Школа экспертов",
             owner: "Константин Константинов",
-            ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg",
+            ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Зmp1QHqG3GyMoXroSLWkvbQ.jpg",
             activeVotes: 0,
             members: 1,
-            icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Zmp1QHqG3GyMoXroSLWkvbQ.jpg"
+            icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Зmp1QHqG3GyMoXroSLWkvbQ.jpg"
         },
     ];
 
@@ -72,11 +78,22 @@ const Dashboard = () => {
         },
     ];
 
+    const handleProjectPageChange = (event, value) => {
+        setProjectPage(value);
+    };
+
+    const handleVotePageChange = (event, value) => {
+        setVotePage(value);
+    };
+
+    const displayedProjects = projects.slice((projectPage - 1) * projectsPerPage, projectPage * projectsPerPage);
+    const displayedVotes = activeVotes.slice((votePage - 1) * votesPerPage, votePage * votesPerPage);
+
     return (
         <div className="dashboard-container">
             <div className="custom-mt space-y-6">
                 <div className="fixed-height-card">
-                    <h2 className="text-xl font-semibold mb-2">Список зарегистрированных DAO</h2> {/* Уменьшаем отступ до содержимого */}
+                    <h2 className="text-xl font-semibold mb-2">Список зарегистрированных DAO</h2>
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
                         <tr>
@@ -87,7 +104,7 @@ const Dashboard = () => {
                         </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
-                        {projects.map((project, index) => (
+                        {displayedProjects.map((project, index) => (
                             <tr key={index}>
                                 <td className="table-cell">
                                     <div className="icon-container">
@@ -121,14 +138,15 @@ const Dashboard = () => {
                         ))}
                         </tbody>
                     </table>
-                    <div className="pagination">
-                        <button className="pagination-button">Previous</button>
-                        <button className="pagination-button">Next</button>
-                    </div>
+                    <PaginationRounded
+                        count={Math.ceil(projects.length / projectsPerPage)}
+                        page={projectPage}
+                        onChange={handleProjectPageChange}
+                    />
                 </div>
 
                 <div className="fixed-height-card">  {/* Копируем стили для активных голосований */}
-                    <h2 className="text-xl font-semibold mb-2">Активные голосования</h2> {/* Уменьшаем отступ до содержимого */}
+                    <h2 className="text-xl font-semibold mb-2">Активные голосования</h2>
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
                         <tr>
@@ -141,7 +159,7 @@ const Dashboard = () => {
                         </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
-                        {activeVotes.map((vote, index) => (
+                        {displayedVotes.map((vote, index) => (
                             <tr key={index}>
                                 <td className="table-cell">{vote.title}</td>
                                 <td className="table-cell">{vote.subtitle}</td>
@@ -153,10 +171,11 @@ const Dashboard = () => {
                         ))}
                         </tbody>
                     </table>
-                    <div className="pagination">
-                        <button className="pagination-button">Previous</button>
-                        <button className="pagination-button">Next</button>
-                    </div>
+                    <PaginationRounded
+                        count={Math.ceil(activeVotes.length / votesPerPage)}
+                        page={votePage}
+                        onChange={handleVotePageChange}
+                    />
                 </div>
             </div>
         </div>
