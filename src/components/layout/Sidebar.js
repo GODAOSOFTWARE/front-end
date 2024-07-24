@@ -69,7 +69,7 @@ const Sidebar = () => {
                 <li>
                     <Link to="/tables" className="sidebar-link">
                         <RiNftFill className="icon"/>
-                        <span>NFT Маркет</span>
+                        <span>NFT Витрина</span>
                     </Link>
                 </li>
             </ul>
@@ -87,7 +87,7 @@ const Sidebar = () => {
                         )
                     )}
                 </AuthChecker>
-                <ConnectButton />
+
             </div>
         </aside>
     );

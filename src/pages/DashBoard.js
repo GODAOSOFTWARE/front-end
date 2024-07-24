@@ -9,73 +9,17 @@ const Dashboard = () => {
     const votesPerPage = 5;
 
     const projects = [
-        {
-            title: "DAO Decimal Dapps",
-            owner: "Константин Медведев",
-            ownerAvatar: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53",
-            activeVotes: 3,
-            members: 4,
-            icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53"
-        },
-        {
-            title: "DAO COD",
-            owner: "Евгений Краснов",
-            ownerAvatar: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg",
-            activeVotes: 1,
-            members: 2,
-            icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg"
-        },
-        {
-            title: "DAO Decimal Chain",
-            owner: "Анатолий Бердников",
-            ownerAvatar: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97",
-            activeVotes: 4,
-            members: 3,
-            icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97"
-        },
-        {
-            title: "DAO Makarovsky",
-            owner: "Дмитрий Макаровский",
-            ownerAvatar: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20",
-            activeVotes: 2,
-            members: 5,
-            icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20"
-        },
-        {
-            title: "DAO Школа экспертов",
-            owner: "Константин Константинов",
-            ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Зmp1QHqG3GyMoXroSLWkvbQ.jpg",
-            activeVotes: 0,
-            members: 1,
-            icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Зmp1QHqG3GyMoXroSLWkvbQ.jpg"
-        },
+        { title: "DAO Decimal Dapps", owner: "Константин Медведев", ownerAvatar: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", activeVotes: 3, members: 4, icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" },
+        { title: "DAO COD", owner: "Евгений Краснов", ownerAvatar: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg", activeVotes: 1, members: 2, icon: "https://backend.ddapps.io/storage/uploads/j/3/n/z/m/2FXCaBRlAGdKQyWGzAWvRcVr8dXqqavAMidSaba4.jpg" },
+        { title: "DAO Decimal Chain", owner: "Анатолий Бердников", ownerAvatar: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97", activeVotes: 4, members: 3, icon: "https://s.gravatar.com/avatar/a4128713caa8e6be6e333f4542358e97" },
+        { title: "DAO Makarovsky", owner: "Дмитрий Макаровский", ownerAvatar: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20", activeVotes: 2, members: 5, icon: "https://s.gravatar.com/avatar/3e8d415cee91e27bc86f3ea8d0c94a20" },
+        { title: "DAO Школа экспертов", owner: "Константин Константинов", ownerAvatar: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDM7Зmp1QHqG3GyMoXroSLWkvbQ.jpg", activeVotes: 0, members: 1, icon: "https://backend.ddapps.io/storage/uploads/m/x/g/9/4/A8MLoDQtu8GwyBDМ7Зmp1QHqG3GyMoXroSLWkvbQ.jpg" },
     ];
 
     const activeVotes = [
-        {
-            title: "Vote 1",
-            subtitle: "Subtitle 1",
-            description: "Description of vote 1",
-            voter: "0x123...",
-            choice: "За",
-            wallet_address: "0x456..."
-        },
-        {
-            title: "Vote 2",
-            subtitle: "Subtitle 2",
-            description: "Description of vote 2",
-            voter: "0x789...",
-            choice: "Против",
-            wallet_address: "0xabc..."
-        },
-        {
-            title: "Vote 3",
-            subtitle: "Subtitle 3",
-            description: "Description of vote 3",
-            voter: "0xdef...",
-            choice: "За",
-            wallet_address: "0xghi..."
-        },
+        { title: "Vote 1", subtitle: "Subtitle 1", description: "Description of vote 1", voter: "0x123...", choice: "За", wallet_address: "0x456..." },
+        { title: "Vote 2", subtitle: "Subtitle 2", description: "Description of vote 2", voter: "0x789...", choice: "Против", wallet_address: "0xabc..." },
+        { title: "Vote 3", subtitle: "Subtitle 3", description: "Description of vote 3", voter: "0xdef...", choice: "За", wallet_address: "0xghi..." },
     ];
 
     const handleProjectPageChange = (event, value) => {
@@ -91,6 +35,9 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-container">
+            <div className="banner">
+                <h2>Зарегистрируйте Ваше первое DAO и начните бизнес компанию на блокчейне</h2>
+            </div>
             <div className="custom-mt space-y-6">
                 <div className="fixed-height-card">
                     <h2 className="text-xl font-semibold mb-2">Список зарегистрированных DAO</h2>
@@ -138,11 +85,13 @@ const Dashboard = () => {
                         ))}
                         </tbody>
                     </table>
-                    <PaginationRounded
-                        count={Math.ceil(projects.length / projectsPerPage)}
-                        page={projectPage}
-                        onChange={handleProjectPageChange}
-                    />
+                    <div className="pagination-container">
+                        <PaginationRounded
+                            count={Math.ceil(projects.length / projectsPerPage)}
+                            page={projectPage}
+                            onChange={handleProjectPageChange}
+                        />
+                    </div>
                 </div>
 
                 <div className="fixed-height-card">  {/* Копируем стили для активных голосований */}
@@ -171,11 +120,13 @@ const Dashboard = () => {
                         ))}
                         </tbody>
                     </table>
-                    <PaginationRounded
-                        count={Math.ceil(activeVotes.length / votesPerPage)}
-                        page={votePage}
-                        onChange={handleVotePageChange}
-                    />
+                    <div className="pagination-container">
+                        <PaginationRounded
+                            count={Math.ceil(activeVotes.length / votesPerPage)}
+                            page={votePage}
+                            onChange={handleVotePageChange}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

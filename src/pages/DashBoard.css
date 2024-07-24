@@ -1,86 +1,105 @@
+/* Общий контейнер для дашборда */
 .dashboard-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1px; /* Обеспечиваем одинаковые отступы */
-    height: 140vh; /* Задаем высоту контейнера на весь экран */
+    padding: 16px;
 }
 
-.custom-mt {
-    margin-top: 16px; /* Добавляем отступ сверху */
+/* Стили для баннера */
+.banner {
+    background: linear-gradient(to right, #0066cc, #3399ff);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 16px;
+    transition: background 0.5s ease;
+    cursor: pointer; /* Курсор в виде руки при наведении */
 }
 
+.banner:hover {
+    background: linear-gradient(to right, #3399ff, #0066cc);
+}
+
+/* Фиксированная высота для карточек */
 .fixed-height-card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    height: calc(100vh - 72px); /* Задаем фиксированную высоту карточки */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Выровнять содержимое по началу */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    position: relative;
+    height: calc(100vh - 140px); /* Высота карточки на весь экран с учетом отступов */
 }
 
-.fixed-height-card h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem; /* Уменьшаем отступ до содержимого */
-    color: #333;
-}
-
-.table-cell {
-    padding: 10px;
-}
-
+/* Стили для заголовков таблиц */
 .table-header {
-    background-color: #f3f4f6;
-    text-align: left;
     padding: 10px;
+    text-align: left;
     font-weight: bold;
+    background-color: #f9fafb;
 }
 
+/* Стили для ячеек таблиц */
+.table-cell {
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Контейнер для иконок */
 .icon-container {
     display: flex;
     align-items: center;
 }
 
-.icon-container img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.owner-avatar {
-    width: 20px;
-    height: 20px;
+/* Иконки проектов */
+.project-icon {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
+/* Аватар создателя */
+.owner-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Контейнер для голосов */
 .votes-container {
     display: flex;
     align-items: center;
 }
 
+/* Иконки голосов */
 .vote-icon {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
+    margin-right: 4px;
 }
 
-.pagination {
+/* Стили для контейнера пагинации */
+.pagination-container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-bottom: 16px;
 }
 
-.pagination-button {
-    background-color: #2d3748;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
+/* Кастомный верхний отступ */
+.custom-mt {
+    margin-top: 24px;
 }
 
-.pagination-button:hover {
-    background-color: #1a202c;
+.dashboard-container {
+    padding-right: 15px; /* Добавляет отступ справа в 15 пикселей */
+    padding-left: 300px; /* Оставляем текущий отступ слева */
+    padding-top: 16px; /* Оставляем текущий отступ сверху */
+    padding-bottom: 16px; /* Оставляем текущий отступ снизу */
+
 }
