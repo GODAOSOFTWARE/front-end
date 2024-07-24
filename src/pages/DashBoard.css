@@ -3,22 +3,27 @@
     flex-direction: column;
     gap: 2rem;
     padding: 1px; /* Обеспечиваем одинаковые отступы */
+    height: 100vh; /* Задаем высоту контейнера на весь экран */
 }
 
 .custom-mt {
     margin-top: 16px; /* Добавляем отступ сверху */
 }
 
-.projects-card, .orders-card {
+.fixed-height-card {
     background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     padding: 1rem;
+    height: calc(100vh - 72px); /* Задаем фиксированную высоту карточки */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Выровнять содержимое по началу */
 }
 
-.projects-card h2, .orders-card h2 {
+.fixed-height-card h2 {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Уменьшаем отступ до содержимого */
     color: #333;
 }
 
@@ -59,4 +64,23 @@
     width: 20px;
     height: 20px;
     margin-right: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.pagination-button {
+    background-color: #2d3748;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.pagination-button:hover {
+    background-color: #1a202c;
 }
