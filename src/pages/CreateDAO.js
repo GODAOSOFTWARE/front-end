@@ -31,64 +31,66 @@ const CreateDAO = () => {
             <div className="create-dao-card">
                 <h1>Создайте Ваше первое DAO</h1>
                 <h2>Заполните данные о вашей команде</h2>
-                <form className="create-dao-form" onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Название DAO"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <textarea
-                        name="description"
-                        placeholder="Описание вашего DAO"
-                        value={formData.description}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="ownerName"
-                        placeholder="Имя владельца"
-                        value={formData.ownerName}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="ownerEmail"
-                        placeholder="Email владельца"
-                        value={formData.ownerEmail}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="tel"
-                        name="ownerPhone"
-                        placeholder="Телефон владельца"
-                        value={formData.ownerPhone}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="teamMembers"
-                        placeholder="Имена членов команды через запятую"
-                        value={formData.teamMembers}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="url"
-                        name="projectWebsite"
-                        placeholder="URL вебсайта проекта"
-                        value={formData.projectWebsite}
-                        onChange={handleChange}
-                        required
-                    />
-                    <button type="submit">Создать DAO</button>
-                </form>
+                <div className="create-dao-form-container">
+                    <form className="create-dao-form" onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Название DAO"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                        <textarea
+                            name="description"
+                            placeholder="Описание вашего DAO"
+                            value={formData.description}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="ownerName"
+                            placeholder="Имя владельца"
+                            value={formData.ownerName}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="ownerEmail"
+                            placeholder="Email владельца"
+                            value={formData.ownerEmail}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="tel"
+                            name="ownerPhone"
+                            placeholder="Телефон владельца"
+                            value={formData.ownerPhone}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="text"
+                            name="teamMembers"
+                            placeholder="Имена членов команды через запятую"
+                            value={formData.teamMembers}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="url"
+                            name="projectWebsite"
+                            placeholder="URL вебсайта проекта"
+                            value={formData.projectWebsite}
+                            onChange={handleChange}
+                            required
+                        />
+                    </form>
+                </div>
+                <button className="create-dao-button" type="submit">Создать DAO</button>
             </div>
         </div>
     );

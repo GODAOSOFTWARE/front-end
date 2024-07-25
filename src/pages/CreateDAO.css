@@ -4,7 +4,7 @@
     align-items: center;
     min-height: 100vh;
     background-color: #f7fafc;
-    padding: 20px; /* Добавлен отступ */
+    padding: 20px;
 }
 
 .create-dao-card {
@@ -13,8 +13,14 @@
     border-radius: 0.5rem;
     padding: 2rem;
     width: 100%;
-    max-width: 40rem; /* Увеличена максимальная ширина */
+    max-width: 40rem;
     margin: 0 1rem;
+}
+
+.create-dao-form-container {
+    max-height: 300px; /* Фиксированная высота для прокрутки */
+    overflow-y: auto; /* Вертикальная прокрутка */
+    padding-right: 10px; /* Отступ справа для удобной прокрутки */
 }
 
 .create-dao-form {
@@ -24,33 +30,35 @@
 
 .create-dao-form input,
 .create-dao-form textarea {
-    margin-bottom: 1.5rem; /* Увеличен отступ между элементами */
-    padding: 1rem; /* Увеличен внутренний отступ */
+    margin-bottom: 1.5rem;
+    padding: 1rem;
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: 0.25rem;
     font-size: 1rem;
 }
 
-.create-dao-form button {
-    padding: 1rem; /* Увеличен внутренний отступ */
+.create-dao-button {
+    padding: 1rem;
     background: linear-gradient(to bottom right, #2d3748, #1a202c);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 0.25rem;
     cursor: pointer;
     font-size: 1rem;
-    transition: background 0.3s ease; /* Добавлен эффект перехода */
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 1.5rem; /* Отступ сверху */
 }
 
-.create-dao-form button:hover {
+.create-dao-button:hover {
     background: #F0B90B;
     color: black;
 }
 
 .create-dao-card h1 {
     text-align: center;
-    margin-bottom: 1.5rem; /* Увеличен отступ */
-    font-size: 2rem; /* Увеличен размер шрифта */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
 }
 
