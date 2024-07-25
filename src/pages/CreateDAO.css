@@ -28,9 +28,19 @@
     flex-direction: column;
 }
 
+.form-group {
+    margin-bottom: 1.5rem; /* Отступ между элементами */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem; /* Отступ между меткой и полем ввода */
+    font-weight: 600; /* Жирный шрифт для меток */
+}
+
 .create-dao-form input,
 .create-dao-form textarea {
-    margin-bottom: 1.5rem;
+    width: 100%;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
