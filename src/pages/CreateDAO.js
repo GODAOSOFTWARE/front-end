@@ -1,5 +1,3 @@
-// src/pages/CreateDAO.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CreateDAO.css'; // Подключаем стили
@@ -29,11 +27,11 @@ const CreateDAO = () => {
     };
 
     return (
-        <div className="dashboard-container">
-            <div className="create-dao-container">
-                <h2>Создайте Ваше первое DAO</h2>
-                <p>Заполните данные о вашей команде</p>
-                <form onSubmit={handleSubmit}>
+        <div className="create-dao-container">
+            <div className="create-dao-card">
+                <h1>Создайте Ваше первое DAO</h1>
+                <h2>Заполните данные о вашей команде</h2>
+                <form className="create-dao-form" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="name"

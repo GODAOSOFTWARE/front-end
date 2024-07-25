@@ -1,58 +1,60 @@
-/* Общий контейнер для страниц дашборда */
-.dashboard-container {
-    padding-right: 15px; /* Добавляет отступ справа в 15 пикселей */
-    padding-left: 300px; /* Оставляем текущий отступ слева */
-    padding-top: 16px; /* Оставляем текущий отступ сверху */
-    padding-bottom: 16px; /* Оставляем текущий отступ снизу */
-}
-
-/* Стили для формы создания DAO */
 .create-dao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7fafc;
+}
+
+.create-dao-card {
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 0 auto; /* Центрирование контейнера */
-    width: calc(100% - 330px); /* Учитываем отступы слева и справа */
-    max-width: 900px; /* Максимальная ширина контейнера */
-    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 1rem;
 }
 
-.create-dao-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.create-dao-container p {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.create-dao-container form {
+.create-dao-form {
     display: flex;
     flex-direction: column;
 }
 
-.create-dao-container input,
-.create-dao-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.create-dao-form input,
+.create-dao-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
 }
 
-.create-dao-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0066cc;
+.create-dao-form button {
+    padding: 0.75rem;
+    background: linear-gradient(to bottom right, #2d3748, #1a202c);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: 1rem;
 }
 
-.create-dao-container button:hover {
-    background-color: #005bb5;
+.create-dao-form button:hover {
+    background: #F0B90B;
+    color: black;
+}
+
+.create-dao-card h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-weight: 800;
+}
+
+.create-dao-card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #718096;
 }

@@ -22,11 +22,11 @@ function App() {
                     <Routes>
                         <Route path="/sign-in" element={<SignIn />} />
                         <Route path="/walletconnect" element={<WalletConnectPage />} />
+                        <Route path="/createDAO" element={<CreateDAO />} /> {/* Добавлен новый маршрут */}
                         <Route path="*" element={
                             <div className="flex">
                                 <Sidebar />
                                 <div className="flex-1">
-
                                     <main className="p-6 main-content">
                                         <Routes>
                                             <Route path="/dashboard" element={<DashBoard />} />
@@ -34,10 +34,8 @@ function App() {
                                             <Route path="/cashback" element={<QrService />} />
                                             <Route path="/airdrops" element={<AirdropService />} />
                                             <Route path="/notifications" element={<Notifications />} />
-                                            <Route path="/sign-in" element={<SignIn />} />
                                             <Route path="/status" element={<StatusService />} />
                                             <Route path="/farming" element={<FarmingService />} />
-                                            <Route path="/createDAO" element={<CreateDAO />} />
                                         </Routes>
                                     </main>
                                 </div>

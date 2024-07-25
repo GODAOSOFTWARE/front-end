@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Импортируем useNavigate для переадресации
 import './DashBoard.css';  // Подключаем стили
 import PaginationRounded from '../components/pagination/PaginationRounded';  // Обновляем путь импорта
 
@@ -7,6 +8,7 @@ const Dashboard = () => {
     const [votePage, setVotePage] = useState(1);
     const projectsPerPage = 5;
     const votesPerPage = 5;
+    const navigate = useNavigate(); // Инициализируем хук useNavigate
 
     const projects = [
         { title: "DAO Decimal Dapps", owner: "Константин Медведев", ownerAvatar: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", activeVotes: 3, members: 4, icon: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53" },
@@ -33,9 +35,13 @@ const Dashboard = () => {
     const displayedProjects = projects.slice((projectPage - 1) * projectsPerPage, projectPage * projectsPerPage);
     const displayedVotes = activeVotes.slice((votePage - 1) * votesPerPage, votePage * votesPerPage);
 
+    const handleBannerClick = () => {
+        navigate('/createDAO'); // Переадресация на страницу создания DAO
+    };
+
     return (
         <div className="dashboard-container">
-            <div className="banner">
+            <div className="banner" onClick={handleBannerClick}>
                 <h2>Зарегистрируйте Ваше первое DAO и начните бизнес компанию на блокчейне</h2>
             </div>
             <div className="custom-mt space-y-6">
