@@ -28,7 +28,7 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
         alignItems: 'center',
         width: '100dvw',
         position: 'fixed',
-        bottom: 24,
+        bottom: 1,
       }}
     >
       <ToggleButtonGroup
@@ -80,7 +80,6 @@ export default function LandingPage() {
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
-        <LogoCollection />
         <Features />
         <Divider />
         <Testimonials />

@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
 
 const logoStyle = {
-    width: '140px',
+    width: '100px',
     height: 'auto',
     cursor: 'pointer',
 };
@@ -96,7 +96,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     sx={{ py: '6px', px: '12px' }}
                                 >
                                     <Typography variant="body2" color="text.primary">
-                                        Features
+                                        Для бизнеса
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem
@@ -104,7 +104,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     sx={{ py: '6px', px: '12px' }}
                                 >
                                     <Typography variant="body2" color="text.primary">
-                                        Testimonials
+                                        Д
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem
@@ -148,7 +148,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 component="a"
                                 href="/sign-in" // изменено на /sign-in
                             >
-                                Sign in
+                                Начать работу
                             </Button>
                         </Box>
                         <Box sx={{ display: { sm: '', md: 'none' } }}>
