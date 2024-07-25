@@ -12,17 +12,15 @@ import { useTheme } from '@mui/system';
 const userTestimonials = [
   {
     avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
-    name: 'Remy Sharp',
-    occupation: 'Senior Engineer',
+    name: 'Готовое решение',
     testimonial:
-      "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable.",
+      "\"Наша платформа предоставляет готовое решение, устраняя необходимость тратить время и деньги на создание и поддержание собственного продукта. Вы можете сразу начать использовать все возможности нашего продукта, что позволяет сфокусироваться на развитии бизнеса, а не на технических деталях.\"",
   },
   {
     avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />,
-    name: 'Travis Howard',
-    occupation: 'Lead Product Designer',
+    name: 'Гибридная архитектура',
     testimonial:
-      "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
+      "\"Мы соединили централизованные и децентрализованные сервисы в одном продукте, что позволяет вам пользоваться преимуществами обоих подходов. Вы получаете гибкость и контроль централизованных решений, а также безопасность и автономность децентрализованных сервисов.\"",
   },
   {
     avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />,
@@ -101,12 +99,12 @@ export default function Testimonials() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Testimonials
+          Выгоды использования платформы
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          See what our customers love about our products. Discover how we excel in
-          efficiency, durability, and satisfaction. Join us for quality, innovation,
-          and reliable support.
+          Воспользуйтесь готовыми решениями для применения
+          технологии блокчейн в бизнес процессах и получите свою выгоду
+          без затрат на разработку собственных продуктов!.
         </Typography>
       </Box>
       <Grid container spacing={2}>
