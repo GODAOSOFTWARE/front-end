@@ -168,7 +168,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 color="primary"
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
-                sx={{ minWidth: '30px', p: '4px' }}
+                sx={{ minWidth: '30px', p: '10px' }}
               >
                 <MenuIcon />
               </Button>
