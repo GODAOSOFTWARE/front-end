@@ -51,12 +51,12 @@ export default function Features() {
     const externalImageUrl = 'https://ddapps.io/backend/storage/uploads/z/2/n/5/8/u3UFl3OTRZLy4ruK9fKjdcnZ5uZRld0koo2hBszN.jpg'; // Фиксированная ссылка на внешнее изображение
 
     return (
-        <Container id="features" sx={{ py: { xs: 0, sm: 0 } }}>
+        <Container id="features" sx={{ py: { xs: 5, sm: 5 } }}>
             <Grid container spacing={6}>
                 <Grid item xs={12} md={6}>
                     <div>
                         <Typography component="h2" variant="h4" color="text.primary">
-                            Функционал для бизнеса
+                            Добро пожаловать в DAO
                         </Typography>
                         <Typography
                             variant="body1"
@@ -130,7 +130,7 @@ export default function Features() {
                                     '&:hover > svg': { transform: 'translateX(2px)' },
                                 }}
                             >
-                                <span>Learn more</span>
+                                <span>Начать работу</span>
                                 <ChevronRightRoundedIcon
                                     fontSize="small"
                                     sx={{ mt: '1px', ml: '2px' }}
@@ -224,7 +224,7 @@ export default function Features() {
                                                 event.stopPropagation();
                                             }}
                                         >
-                                            <span>Learn more</span>
+                                            <span>Начать работу</span>
                                             <ChevronRightRoundedIcon
                                                 fontSize="small"
                                                 sx={{ mt: '1px', ml: '2px' }}
@@ -254,9 +254,10 @@ export default function Features() {
                         <Box
                             sx={{
                                 m: 'auto',
-                                width: 500,
-                                height: 500,
+                                width: 600,
+                                height: 600,
                                 backgroundSize: 'contain',
+                                borderRadius: '15px',
                                 backgroundImage: `url(${externalImageUrl})`,
                             }}
                         />

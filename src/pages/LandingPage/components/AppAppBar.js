@@ -6,18 +6,12 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
+import Divider from '@mui/material/Divider';  // Добавляем импорт Divider
 import ToggleColorMode from './ToggleColorMode';
-
-const logoStyle = {
-    width: '100px',
-    height: 'auto',
-    cursor: 'pointer',
-};
 
 function AppAppBar({ mode, toggleColorMode }) {
     const [open, setOpen] = React.useState(false);
@@ -57,7 +51,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                         sx={(theme) => ({
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'space-between',
+                            justifyContent: 'center', // Центрируем все содержимое
                             flexShrink: 0,
                             borderRadius: '999px',
                             bgcolor:
@@ -74,72 +68,29 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
                         })}
                     >
-                        <Box
-                            sx={{
-                                flexGrow: 1,
-                                display: 'flex',
-                                alignItems: 'center',
-                                ml: '-18px',
-                                px: 0,
-                            }}
-                        >
-                            <img
-                                src={
-                                    'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                                }
-                                style={logoStyle}
-                                alt="logo of sitemark"
-                            />
-                            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                                <MenuItem
-                                    onClick={() => scrollToSection('features')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        Для бизнеса
-                                    </Typography>
-                                </MenuItem>
-                                <MenuItem
-                                    onClick={() => scrollToSection('testimonials')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        Д
-                                    </Typography>
-                                </MenuItem>
-                                <MenuItem
-                                    onClick={() => scrollToSection('highlights')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        Highlights
-                                    </Typography>
-                                </MenuItem>
-                                <MenuItem
-                                    onClick={() => scrollToSection('pricing')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        Pricing
-                                    </Typography>
-                                </MenuItem>
-                                <MenuItem
-                                    onClick={() => scrollToSection('faq')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        FAQ
-                                    </Typography>
-                                </MenuItem>
-                            </Box>
+                        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, flexGrow: 1, justifyContent: 'center' }}>
+                            <MenuItem onClick={() => scrollToSection('features')} sx={{ py: '6px', px: '12px' }}>
+                                <Typography variant="body2" color="text.primary">
+                                    Начать работу
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => scrollToSection('testimonials')} sx={{ py: '6px', px: '12px' }}>
+                                <Typography variant="body2" color="text.primary">
+                                    Сервисы для ведения бизнеса
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => scrollToSection('highlights')} sx={{ py: '6px', px: '12px' }}>
+                                <Typography variant="body2" color="text.primary">
+                                 Сервисы для участия в бизнесе
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => scrollToSection('faq')} sx={{ py: '6px', px: '12px' }}>
+                                <Typography variant="body2" color="text.primary">
+                                    Ответы на вопросы
+                                </Typography>
+                            </MenuItem>
                         </Box>
-                        <Box
-                            sx={{
-                                display: { xs: 'none', md: 'flex' },
-                                gap: 0.5,
-                                alignItems: 'center',
-                            }}
-                        >
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, ml: 'auto' }}>
                             <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                             <Button
                                 color="primary"
@@ -150,63 +101,63 @@ function AppAppBar({ mode, toggleColorMode }) {
                             >
                                 Начать работу
                             </Button>
-                        </Box>
-                        <Box sx={{ display: { sm: '', md: 'none' } }}>
-                            <Button
-                                variant="text"
-                                color="primary"
-                                aria-label="menu"
-                                onClick={toggleDrawer(true)}
-                                sx={{ minWidth: '30px', p: '10px' }}
-                            >
-                                <MenuIcon />
-                            </Button>
-                            <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                                <Box
-                                    sx={{
-                                        minWidth: '60dvw',
-                                        p: 2,
-                                        backgroundColor: 'background.paper',
-                                        flexGrow: 1,
-                                    }}
+                            <Box sx={{ display: { sm: '', md: 'none' } }}>
+                                <Button
+                                    variant="text"
+                                    color="primary"
+                                    aria-label="menu"
+                                    onClick={toggleDrawer(true)}
+                                    sx={{ minWidth: '30px', p: '10px' }}
                                 >
+                                    <MenuIcon />
+                                </Button>
+                                <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                                     <Box
                                         sx={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            alignItems: 'end',
+                                            minWidth: '60dvw',
+                                            p: 2,
+                                            backgroundColor: 'background.paper',
                                             flexGrow: 1,
                                         }}
                                     >
-                                        <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-                                    </Box>
-                                    <MenuItem onClick={() => scrollToSection('features')}>
-                                        Features
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('testimonials')}>
-                                        Testimonials
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('highlights')}>
-                                        Highlights
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('pricing')}>
-                                        Pricing
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
-                                    <Divider />
-                                    <MenuItem>
-                                        <Button
-                                            color="primary"
-                                            variant="outlined"
-                                            component="a"
-                                            href="/sign-in" // изменено на /sign-in
-                                            sx={{ width: '100%' }}
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                alignItems: 'end',
+                                                flexGrow: 1,
+                                            }}
                                         >
-                                            Sign in
-                                        </Button>
-                                    </MenuItem>
-                                </Box>
-                            </Drawer>
+                                            <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
+                                        </Box>
+                                        <MenuItem onClick={() => scrollToSection('features')}>
+                                            Features
+                                        </MenuItem>
+                                        <MenuItem onClick={() => scrollToSection('testimonials')}>
+                                            Testimonials
+                                        </MenuItem>
+                                        <MenuItem onClick={() => scrollToSection('highlights')}>
+                                            Highlights
+                                        </MenuItem>
+                                        <MenuItem onClick={() => scrollToSection('pricing')}>
+                                            Pricing
+                                        </MenuItem>
+                                        <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
+                                        <Divider />
+                                        <MenuItem>
+                                            <Button
+                                                color="primary"
+                                                variant="outlined"
+                                                component="a"
+                                                href="/sign-in" // изменено на /sign-in
+                                                sx={{ width: '100%' }}
+                                            >
+                                                Sign in
+                                            </Button>
+                                        </MenuItem>
+                                    </Box>
+                                </Drawer>
+                            </Box>
                         </Box>
                     </Toolbar>
                 </Container>
