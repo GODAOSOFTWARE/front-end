@@ -46,7 +46,6 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
       >
         <ToggleButton value>
           <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
-          Custom theme
         </ToggleButton>
         <ToggleButton value={false}>Material Design 2</ToggleButton>
       </ToggleButtonGroup>
@@ -94,10 +93,6 @@ export default function LandingPage() {
         <Divider />
         <Footer />
       </Box>
-      <ToggleCustomTheme
-        showCustomTheme={showCustomTheme}
-        toggleCustomTheme={toggleCustomTheme}
-      />
     </ThemeProvider>
   );
 }

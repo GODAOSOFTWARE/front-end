@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/layout/Sidebar';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
 import CreateDAO from '../pages/CreateDAO'; // Импортируйте новый компонент
+import LandingPage from '../pages/LandingPage/LandingPage'; // Импортируйте LandingPage
 
 const Votes = lazy(() => import('../pages/Votes'));
 const QrService = lazy(() => import('../pages/QrService'));
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/sign-in" element={<SignIn />} />
                         <Route path="/walletconnect" element={<WalletConnectPage />} />
                         <Route path="/createDAO" element={<CreateDAO />} /> {/* Добавлен новый маршрут */}
+                        <Route path="/" element={<LandingPage />} /> {/* Добавлен маршрут для LandingPage */}
                         <Route path="*" element={
                             <div className="flex">
                                 <Sidebar />
