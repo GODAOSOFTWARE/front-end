@@ -11,7 +11,6 @@ import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
 import { IoIosHome } from "react-icons/io";
 import AuthChecker from '../cheker/AuthChecker';
-import ConnectButton from '../web3/ConnectButton';
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -32,7 +31,7 @@ const Sidebar = () => {
                 <li>
                     <Link to="/dashboard" className="sidebar-link">
                         <IoIosHome className="icon"/>
-                        <span>Дашборд</span>
+                        <span>Компании</span>
                     </Link>
                 </li>
                 <li>

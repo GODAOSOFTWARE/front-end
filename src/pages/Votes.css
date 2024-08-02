@@ -121,7 +121,7 @@
 }
 
 .more-details-button {
-    background: linear-gradient(90deg, #007BFF 0%, #00C6FF 100%); /* Градиентный фон кнопки */
+    background: black; /* Градиентный фон кнопки */
     color: white;
     border: none;
     border-radius: 12px;
@@ -134,7 +134,7 @@
 }
 
 .more-details-button:hover {
-    background: linear-gradient(90deg, #0056b3 0%, #0094d9 100%); /* Темный градиент при наведении */
+    background: linear-gradient(90deg, #007BFF 0%, #00C6FF 100%); /* Градиентный фон кнопки */
 }
 
 /* Styles for the modal overlay */

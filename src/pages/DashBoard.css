@@ -5,8 +5,8 @@
 
 /* Стили для баннера */
 .banner {
-    background:  #3b82f6;
-    color: #fff;
+    background:  white;
+    color: black;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,8 +17,8 @@
 }
 
 .banner:hover {
-    background: #F0B90B;
-    color: black;
+    background: linear-gradient(90deg, #007BFF 0%, #00C6FF 100%); /* Градиентный фон кнопки */
+    color: white;
 }
 
 /* Фиксированная высота для карточек */
