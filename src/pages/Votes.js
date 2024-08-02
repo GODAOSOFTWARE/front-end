@@ -31,9 +31,9 @@ const Votes = () => {
             dueDate: "15.04.22"
         },
         {
-            logo: "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5m5sgZTU5pW_2im4QDQhBZivrDe79r1RUig&s",
             dao: "DAO",
-            daoName: "Voting System",
+            daoName: "Федерация Самбо",
             creator: "Алексей Иванов",
             description: "Предлагаю внедрить систему голосований для улучшения взаимодействия с пользователями.",
             participants: [
@@ -43,9 +43,9 @@ const Votes = () => {
             dueDate: "30.06.22"
         },
         {
-            logo: "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+            logo: "https://play-lh.googleusercontent.com/R5c-XEghIzwSIgmqw1J0_dV-V724eg6qBrqk3g-i6SBFx7nHHVtBVUDwJNP7C9cbYw",
             dao: "DAO",
-            daoName: "Blockchain Education",
+            daoName: "МТС",
             creator: "Мария Смирнова",
             description: "Предлагаю создать образовательный портал для обучения работе с блокчейном.",
             participants: [
@@ -55,9 +55,9 @@ const Votes = () => {
             dueDate: "10.05.22"
         },
         {
-            logo: "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfokYSvIS-eP64Jf2UMXFWwta2ZEQHDs0UGQ&s",
             dao: "DAO",
-            daoName: "Crypto Tracker",
+            daoName: "Ростелеком",
             creator: "Иван Петров",
             description: "Предлагаю разработать мобильное приложение для отслеживания криптовалютных транзакций.",
             participants: [
@@ -67,9 +67,9 @@ const Votes = () => {
             dueDate: "20.07.22"
         },
         {
-            logo: "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Emblem_of_Central_Election_Commission_of_Russia.svg/1200px-Emblem_of_Central_Election_Commission_of_Russia.svg.png",
             dao: "DAO",
-            daoName: "Online Conferences",
+            daoName: "ЦИК России",
             creator: "Ольга Кузнецова",
             description: "Предлагаю создать платформу для проведения онлайн-конференций по блокчейну.",
             participants: [

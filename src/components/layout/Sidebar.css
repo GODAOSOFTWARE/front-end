@@ -2,7 +2,8 @@
 
 /* Основной стиль для боковой панели */
 .sidebar {
-    background: linear-gradient(to bottom right, #2d3748, #1a202c);
+    background: black; /* Полупрозрачный черный цвет */
+    color: #ffffff; /* Белый цвет текста */
     transform: translateX(0);
     position: fixed;
     top: 40px; /* Задаем отступ от верхнего края */
@@ -14,7 +15,6 @@
     width: 18rem;
     border-radius: 0.75rem;
     transition: transform 0.3s;
-    color: #F0B90B;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
