@@ -23,8 +23,8 @@ code {
 
 /* Фон для рабочей области */
 .main-content {
-    background-color: rgba(229, 231, 235, 0.5);
-    margin-left: 0px; /* Светло-серый цвет */
+    background-color: rgba(229, 231, 235, 0.5); /* Светло-серый цвет */
+    margin-left: 0px;
 }
 
 .content-margin {

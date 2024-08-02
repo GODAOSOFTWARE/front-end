@@ -23,13 +23,29 @@
 
 /* Стили для карточек голосований */
 .vote-card {
-    background-color: #fff;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.3); /* Прозрачный белый фон */
+}
+
+.vote-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+    margin: -10px;
 }
 
 .card-header {
@@ -153,7 +169,7 @@
     border: 1px solid #888;
     width: 80%; /* Уменьшить ширину */
     max-width: 400px; /* Установить максимальную ширину */
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,7 +214,7 @@
     background-color: #3b82f6;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 8px 16px;
     cursor: pointer;
     font-size: 0.875rem;
