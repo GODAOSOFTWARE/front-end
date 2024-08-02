@@ -1,5 +1,3 @@
-// src/components/layout/Sidebar.js
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
@@ -79,14 +77,9 @@ const Sidebar = () => {
                             <button className="sign-out-button" onClick={handleLogoutClick}>
                                 Выйти
                             </button>
-                        ) : (
-                            <button className="sign-in-button" onClick={handleSignInClick}>
-                                Начать работу
-                            </button>
-                        )
+                        ) : null
                     )}
                 </AuthChecker>
-
             </div>
         </aside>
     );

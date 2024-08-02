@@ -21,7 +21,7 @@ const Votes = () => {
         {
             logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqB7psH_iUqd6AZROsDJZXwI6nS5uR5xynCg&s",
             dao: "DAO",
-            daoName: "Тиньков",
+            daoName: "Т-Банк",
             creator: "Семен Иванов",
             description: "Предлагаю создать функционал выпуска QR кодов с кэшбеком для стимулирования покупок.",
             participants: [
