@@ -1,85 +1,88 @@
-// src/pages/Votes.js
-
 import React from 'react';
-import MediumCard from '../components/cards/content/MediumCard';
-import './Votes.css'; // Подключаем стили
+import './Votes.css'; // Подключаем объединенный файл стилей
 
 const Votes = () => {
     const cardsData = [
         {
-            projectNumber: 1,
-            title: "Статусы PRO",
-            description: "Изменить монету для начисления ревардов.",
-            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
-            members: [
+            logo: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", // Замените на фактический URL логотипа
+            creator: "Константин Медведев",
+            description: "Предлагаю создать тапалку для привлечения новой аудитории в ...",
+            participants: [
                 "https://randomuser.me/api/portraits/men/1.jpg",
-                "https://randomuser.me/api/portraits/women/2.jpg",
-                "https://randomuser.me/api/portraits/men/3.jpg"
-            ]
+            ],
+            participantsCount: 70,
+            dueDate: "02.03.22"
         },
         {
-            projectNumber: 2,
-            title: "Эмиссия PRO",
-            description: "Увелчить эмиссию на один миллион",
-            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
-            members: [
+            logo: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", // Замените на фактический URL логотипа
+            creator: "Константин Медведев",
+            description: "Предлагаю создать тапалку для привлечения новой аудитории в ...",
+            participants: [
                 "https://randomuser.me/api/portraits/men/1.jpg",
-                "https://randomuser.me/api/portraits/women/2.jpg",
-                "https://randomuser.me/api/portraits/men/3.jpg"
-            ]
+            ],
+            participantsCount: 70,
+            dueDate: "02.03.22"
         },
         {
-            projectNumber: 3,
-            title: "Статусы TMT",
-            description: "Создать первый статус для партнеров",
-            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
-            members: [
+            logo: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", // Замените на фактический URL логотипа
+            creator: "Константин Медведев",
+            description: "Предлагаю создать тапалку для привлечения новой аудитории в ...",
+            participants: [
                 "https://randomuser.me/api/portraits/men/1.jpg",
-                "https://randomuser.me/api/portraits/women/2.jpg",
-                "https://randomuser.me/api/portraits/men/3.jpg"
-            ]
+            ],
+            participantsCount: 70,
+            dueDate: "02.03.22"
         },
         {
-            projectNumber: 4,
-            title: "Проект 4",
-            description: "Описание проекта 4.",
-            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
-            members: [
+            logo: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", // Замените на фактический URL логотипа
+            creator: "Константин Медведев",
+            description: "Предлагаю создать тапалку для привлечения новой аудитории в ...",
+            participants: [
                 "https://randomuser.me/api/portraits/men/1.jpg",
-                "https://randomuser.me/api/portraits/women/2.jpg",
-                "https://randomuser.me/api/portraits/men/3.jpg"
-            ]
+            ],
+            participantsCount: 70,
+            dueDate: "02.03.22"
         },
         {
-            projectNumber: 5,
-            title: "Проект 5",
-            description: "Описание проекта 5.",
-            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
-            members: [
+            logo: "https://s.gravatar.com/avatar/9b3d2786ac7fe60b8902e198994d5f53", // Замените на фактический URL логотипа
+            creator: "Константин Медведев",
+            description: "Предлагаю создать тапалку для привлечения новой аудитории в ...",
+            participants: [
                 "https://randomuser.me/api/portraits/men/1.jpg",
-                "https://randomuser.me/api/portraits/women/2.jpg",
-                "https://randomuser.me/api/portraits/men/3.jpg"
-            ]
-        }
+            ],
+            participantsCount: 70,
+            dueDate: "02.03.22"
+        },
+
+
+
+
     ];
 
     return (
         <div className="votes-container">
             <div className="votes-grid">
                 {cardsData.map((card, index) => (
-                    <MediumCard
-                        key={index}
-                        voteNumber={card.projectNumber}
-                        title={card.title}
-                        description={card.description}
-                        image={card.image}
-                        members={card.members}
-                        className="vote-card"
-                    />
+                    <div key={index} className="vote-card">
+                        <div className="card-header">
+                            <img src={card.logo} alt={card.creator} className="card-logo" />
+                        </div>
+                        <div className="card-body">
+                            <h3 className="card-title">{card.creator}</h3>
+                            <div className="card-participants">
+                                {card.participants.map((participant, idx) => (
+                                    <img key={idx} src={participant} alt={`participant-${idx}`} className="participant-avatar" />
+                                ))}
+                            </div>
+                            <p className="card-description">{card.description}</p>
+                            <button className="more-details-button">Подробнее</button>
+                        </div>
+                        <div className="card-footer">
+                            <div className="participants-count">{card.participantsCount} Participants</div>
+                            <div className="due-date">{card.dueDate} Due date</div>
+                        </div>
+                    </div>
                 ))}
-                <div className="vote-card add-new-card">
-                    <span>+</span>
-                </div>
             </div>
         </div>
     );

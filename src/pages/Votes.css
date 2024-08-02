@@ -3,22 +3,22 @@
 /* Общий контейнер для страницы голосований */
 .votes-container {
     padding: 16px;
-    padding-right: 15px; /* Добавляет отступ справа в 15 пикселей */
-    padding-left: 300px; /* Оставляем текущий отступ слева */
-    padding-top: 16px; /* Оставляем текущий отступ сверху */
-    padding-bottom: 16px; /* Оставляем текущий отступ снизу */
+    padding-right: 15px;
+    padding-left: 300px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирование содержимого по горизонтали */
+    align-items: center;
 }
 
 /* Сетка для карточек голосований */
 .votes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px; /* Расстояние между карточками */
-    width: 100%; /* Делаем сетку шириной 100%, чтобы избежать отступов */
-    max-width: 1200px; /* Ограничиваем максимальную ширину сетки */
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 /* Стили для карточек голосований */
@@ -26,9 +26,67 @@
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px; /* Уменьшенная высота карточек */
+    height: 100%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eceff1;
+}
+
+.card-logo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.375rem;
+}
+
+.card-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-participants {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.participant-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: #607d8b;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 1px solid #eceff1;
+}
+
+.participants-count,
+.due-date {
+    font-size: 0.875rem;
+    color: #607d8b;
 }
