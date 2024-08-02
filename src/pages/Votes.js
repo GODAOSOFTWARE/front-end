@@ -1,13 +1,8 @@
 // src/pages/Votes.js
 
-/// Этот файл определяет страницу панели управления (Votes).
-/// Панель управления отображает активные голосования в виде карточек.
-/// Данные для карточек (проекты) загружаются и отображаются с использованием
-// компонента `Card`.
-
-
 import React from 'react';
 import MediumCard from '../components/cards/content/MediumCard';
+import './Votes.css'; // Подключаем стили
 
 const Votes = () => {
     const cardsData = [
@@ -43,16 +38,34 @@ const Votes = () => {
                 "https://randomuser.me/api/portraits/women/2.jpg",
                 "https://randomuser.me/api/portraits/men/3.jpg"
             ]
+        },
+        {
+            projectNumber: 4,
+            title: "Проект 4",
+            description: "Описание проекта 4.",
+            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
+            members: [
+                "https://randomuser.me/api/portraits/men/1.jpg",
+                "https://randomuser.me/api/portraits/women/2.jpg",
+                "https://randomuser.me/api/portraits/men/3.jpg"
+            ]
+        },
+        {
+            projectNumber: 5,
+            title: "Проект 5",
+            description: "Описание проекта 5.",
+            image: "https://public.bnbstatic.com/static/academy/uploads-original/f2634dc4a87d4b73a22713b6884bbbd0.jpg",
+            members: [
+                "https://randomuser.me/api/portraits/men/1.jpg",
+                "https://randomuser.me/api/portraits/women/2.jpg",
+                "https://randomuser.me/api/portraits/men/3.jpg"
+            ]
         }
     ];
 
     return (
-        <div className="p-6">
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold">Активные голосования</h1>
-                <button className="bg-white text-gray-800 bg-white p-6 shadow-md rounded-lg flex flex-col py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-white">Создать голосование</button>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 content-margin"> {/* Применен класс content-margin */}
+        <div className="votes-container">
+            <div className="votes-grid">
                 {cardsData.map((card, index) => (
                     <MediumCard
                         key={index}
@@ -61,8 +74,12 @@ const Votes = () => {
                         description={card.description}
                         image={card.image}
                         members={card.members}
+                        className="vote-card"
                     />
                 ))}
+                <div className="vote-card add-new-card">
+                    <span>+</span>
+                </div>
             </div>
         </div>
     );

@@ -1,12 +1,3 @@
-// src/components/Card.js
-
-/// Этот файл определяет компонент карточки (Card).
-/// Карточка используется для отображения информации о чем-либо,
-/// включая изображение, заголовок, описание и список участников.
-/// Компонент принимает пропсы для заголовка, описания, изображения,
-// ID и списка связанных с этим пользователей
-
-
 import React from 'react';
 
 const MediumCard = ({ title, description, image, voteNumber, members }) => {
@@ -14,12 +5,12 @@ const MediumCard = ({ title, description, image, voteNumber, members }) => {
         <div className="bg-white p-6 shadow-md rounded-lg flex flex-col">
             <img src={image} alt={title} className="rounded-lg mb-4 w-full h-40 object-cover" />
             <div className="mb-4 flex-1">
-                <h3 className="text-sm font-semibold text-gray-500">Голосование #{voteNumber}</h3>
+                <h3 className="text-sm font-semibold text-gray-500">Vote #{voteNumber}</h3>
                 <h2 className="text-xl font-bold text-gray-800">{title}</h2>
                 <p className="text-gray-600">{description}</p>
             </div>
             <div className="flex items-center justify-between">
-                <button className="bg-gray text-black-800 border border-white-100 py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-white">Подробнее</button>
+                <button className="bg-gray text-black-800 border border-white-100 py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-white">More Details</button>
                 <div className="flex -space-x-2">
                     {members.map((member, index) => (
                         <img

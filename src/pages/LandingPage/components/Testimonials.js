@@ -103,8 +103,7 @@ export default function Testimonials() {
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Воспользуйтесь готовыми решениями для применения
-          технологии блокчейн в бизнес процессах и получите свою выгоду
-          без затрат на разработку собственных продуктов!.
+          технологии блокчейн в бизнесе
         </Typography>
       </Box>
       <Grid container spacing={2}>
@@ -137,11 +136,7 @@ export default function Testimonials() {
                   title={testimonial.name}
                   subheader={testimonial.occupation}
                 />
-                <img
-                  src={logos[index]}
-                  alt={`Logo ${index + 1}`}
-                  style={logoStyle}
-                />
+
               </Box>
             </Card>
           </Grid>

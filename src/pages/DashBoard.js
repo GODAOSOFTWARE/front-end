@@ -100,40 +100,6 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                <div className="fixed-height-card">  {/* Копируем стили для активных голосований */}
-                    <h2 className="text-xl font-semibold mb-2">Активные голосования</h2>
-                    <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
-                        <tr>
-                            <th scope="col" className="table-header">Название</th>
-                            <th scope="col" className="table-header">Подзаголовок</th>
-                            <th scope="col" className="table-header">Описание</th>
-                            <th scope="col" className="table-header">Голосующий</th>
-                            <th scope="col" className="table-header">Выбор</th>
-                            <th scope="col" className="table-header">Адрес кошелька</th>
-                        </tr>
-                        </thead>
-                        <tbody className="bg-white divide-y divide-gray-200">
-                        {displayedVotes.map((vote, index) => (
-                            <tr key={index}>
-                                <td className="table-cell">{vote.title}</td>
-                                <td className="table-cell">{vote.subtitle}</td>
-                                <td className="table-cell">{vote.description}</td>
-                                <td className="table-cell">{vote.voter}</td>
-                                <td className="table-cell">{vote.choice}</td>
-                                <td className="table-cell">{vote.wallet_address}</td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
-                    <div className="pagination-container">
-                        <PaginationRounded
-                            count={Math.ceil(activeVotes.length / votesPerPage)}
-                            page={votePage}
-                            onChange={handleVotePageChange}
-                        />
-                    </div>
-                </div>
             </div>
         </div>
     );

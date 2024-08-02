@@ -1,0 +1,34 @@
+/* src/pages/Votes.css */
+
+/* Общий контейнер для страницы голосований */
+.votes-container {
+    padding: 16px;
+    padding-right: 15px; /* Добавляет отступ справа в 15 пикселей */
+    padding-left: 300px; /* Оставляем текущий отступ слева */
+    padding-top: 16px; /* Оставляем текущий отступ сверху */
+    padding-bottom: 16px; /* Оставляем текущий отступ снизу */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+/* Сетка для карточек голосований */
+.votes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px; /* Расстояние между карточками */
+    width: 100%; /* Делаем сетку шириной 100%, чтобы избежать отступов */
+    max-width: 1200px; /* Ограничиваем максимальную ширину сетки */
+}
+
+/* Стили для карточек голосований */
+.vote-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px; /* Уменьшенная высота карточек */
+}

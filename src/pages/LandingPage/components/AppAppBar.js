@@ -1,17 +1,19 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-import Divider from '@mui/material/Divider';  // Добавляем импорт Divider
+import Divider from '@mui/material/Divider';
 import ToggleColorMode from './ToggleColorMode';
+import ConnectButton from '../../../components/web3/ConnectButton';
+import Button from '@mui/material/Button';
+
+
 
 function AppAppBar({ mode, toggleColorMode }) {
     const [open, setOpen] = React.useState(false);
@@ -51,7 +53,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                         sx={(theme) => ({
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'center', // Центрируем все содержимое
+                            justifyContent: 'center',
                             flexShrink: 0,
                             borderRadius: '999px',
                             bgcolor:
@@ -97,15 +99,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, ml: 'auto' }}>
                             <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-                            <Button
-                                color="primary"
-                                variant="text"
-                                size="small"
-                                component="a"
-                                href="/sign-in" // изменено на /sign-in
-                            >
-                                Начать работу
-                            </Button>
+                            <ConnectButton />
                             <Box sx={{ display: { sm: '', md: 'none' } }}>
                                 <Button
                                     variant="text"
@@ -150,15 +144,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                         <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
                                         <Divider />
                                         <MenuItem>
-                                            <Button
-                                                color="primary"
-                                                variant="outlined"
-                                                component="a"
-                                                href="/sign-in" // изменено на /sign-in
-                                                sx={{ width: '100%' }}
-                                            >
-                                                Sign in
-                                            </Button>
+                                            <ConnectButton />
                                         </MenuItem>
                                     </Box>
                                 </Drawer>
