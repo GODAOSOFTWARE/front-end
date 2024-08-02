@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Импортируем useNavigate для переадресации
 import './Votes.css'; // Подключаем объединенный файл стилей
 
 const Votes = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState(null);
+    const navigate = useNavigate(); // Инициализируем хук useNavigate
 
     const cardsData = [
         {
@@ -89,8 +91,15 @@ const Votes = () => {
         setModalOpen(false);
     };
 
+    const handleBannerClick = () => {
+        navigate('/createVote'); // Переадресация на страницу создания голосования
+    };
+
     return (
         <div className="votes-container">
+            <div className="banner" onClick={handleBannerClick}>
+                <h2>Создавайте надежные,прозрачные и неизменные голосования на блокчейне</h2>
+            </div>
             <div className="votes-grid">
                 {cardsData.map((card, index) => (
                     <div key={index} className="vote-card">
