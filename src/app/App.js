@@ -10,7 +10,6 @@ const QrService = lazy(() => import('../pages/QrService'));
 const AirdropService = lazy(() => import('../pages/AirdropService'));
 const Notifications = lazy(() => import('../pages/Notifications'));
 const SignIn = lazy(() => import('../pages/SignIn'));
-const DashBoard = lazy(() => import('../pages/DashBoard'));
 const WalletConnectPage = lazy(() => import('../pages/WalletConnectPage'));
 const StatusService = lazy(() => import('../pages/StatusService'));
 const FarmingService = lazy(() => import('../pages/FarmingService'));
@@ -31,7 +30,6 @@ function App() {
                                 <div className="flex-1">
                                     <main className="p-6 main-content">
                                         <Routes>
-                                            <Route path="/dashboard" element={<DashBoard />} />
                                             <Route path="/votes" element={<Votes />} />
                                             <Route path="/cashback" element={<QrService />} />
                                             <Route path="/airdrops" element={<AirdropService />} />

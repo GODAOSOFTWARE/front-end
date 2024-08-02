@@ -7,7 +7,6 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
-import { IoIosHome } from "react-icons/io";
 import AuthChecker from '../cheker/AuthChecker';
 
 const Sidebar = () => {
@@ -26,12 +25,6 @@ const Sidebar = () => {
         <aside className="sidebar">
             <ul className="sidebar-list">
                 <div className="logo"></div>
-                <li>
-                    <Link to="/dashboard" className="sidebar-link">
-                        <IoIosHome className="icon"/>
-                        <span>Компании</span>
-                    </Link>
-                </li>
                 <li>
                     <Link to="/votes" className="sidebar-link">
                         <MdHowToVote className="icon"/>
