@@ -112,7 +112,7 @@
                                 <img src={card.participants[0]} alt={card.creator} className="participant-avatar" />
                                 <h3 className="card-title">{card.creator}</h3>
                                 <p className="card-description">{card.description}</p>
-                                <button className="more-details-button" onClick={() => openModal(card)}>Подробнее</button>
+                                <button className="more-details-button" onClick={() => openModal(card)}>Участвовать</button>
                             </div>
                             <div className="card-footer">
                                 <div className="participants-count">{card.participantsCount} Participants</div>
@@ -126,7 +126,6 @@
                     <div className="modal" onClick={closeModal}>
                         <div className="modal-content" onClick={e => e.stopPropagation()}>
                             <span className="close" onClick={closeModal}>&times;</span>
-                            <img src={modalData.logo} alt={modalData.daoName} className="modal-logo" />
                             <img src={modalData.participants[0]} alt={modalData.creator} className="modal-avatar" />
                             <h3 className="card-title">{modalData.creator}</h3>
                             <p className="card-description">{modalData.description}</p>

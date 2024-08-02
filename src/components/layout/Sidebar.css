@@ -2,7 +2,7 @@
 
 /* Основной стиль для боковой панели */
 .sidebar {
-    background: white; /* Прозрачный черный фон */
+
     backdrop-filter: blur(10px); /* Эффект размытия */
     color: black; /* Белый цвет текста */
     transform: translateX(0);
@@ -14,7 +14,7 @@
     z-index: 50;
     height: calc(100vh - 48px); /* Учитываем новый верхний отступ в высоте */
     width: 18rem;
-    border-radius: 1rem;
+    border-radius: 12px;
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-    color: black;
+    color: darkblue;
 }
 
 /* Ссылки в боковой панели */
@@ -52,12 +52,13 @@
     text-decoration: none;
     font-weight: 500;
     color: black;
+
     transition: background 0.2s;
 }
 
 /* Активная ссылка */
 .active-link {
-    background: white; /* Синий цвет для активного элемента меню */
+    background: linear-gradient(90deg, #005BBB 0%, #007FFF 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
 }
@@ -70,7 +71,7 @@
 
 /* Стили для ссылок при наведении */
 .sidebar-link:hover {
-    background: black; /* Градиентный фон кнопки */
+    background: linear-gradient(90deg, #005BBB 0%, #007FFF 100%);
     color: white;
 }
 
