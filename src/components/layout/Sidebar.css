@@ -14,7 +14,7 @@
     z-index: 50;
     height: calc(100vh - 48px); /* Учитываем новый верхний отступ в высоте */
     width: 18rem;
-    border-radius: 0.75rem;
+    border-radius: 1rem;
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
