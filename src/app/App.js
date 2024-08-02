@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/layout/Sidebar';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
-import CreateDAO from '../pages/CreateDAO'; // Импортируйте новый компонент
-import LandingPage from '../pages/LandingPage/LandingPage'; // Импортируйте LandingPage
+import CreateDAO from '../pages/CreateDAO';
+import LandingPage from '../pages/LandingPage/LandingPage';
 
 const Votes = lazy(() => import('../pages/Votes'));
 const QrService = lazy(() => import('../pages/QrService'));
@@ -13,6 +13,7 @@ const SignIn = lazy(() => import('../pages/SignIn'));
 const WalletConnectPage = lazy(() => import('../pages/WalletConnectPage'));
 const StatusService = lazy(() => import('../pages/StatusService'));
 const FarmingService = lazy(() => import('../pages/FarmingService'));
+const Company = lazy(() => import('../pages/Company')); // Импорт нового компонента
 
 function App() {
     return (
@@ -22,8 +23,8 @@ function App() {
                     <Routes>
                         <Route path="/sign-in" element={<SignIn />} />
                         <Route path="/walletconnect" element={<WalletConnectPage />} />
-                        <Route path="/createDAO" element={<CreateDAO />} /> {/* Добавлен новый маршрут */}
-                        <Route path="/" element={<LandingPage />} /> {/* Добавлен маршрут для LandingPage */}
+                        <Route path="/createDAO" element={<CreateDAO />} />
+                        <Route path="/" element={<LandingPage />} />
                         <Route path="*" element={
                             <div className="flex">
                                 <Sidebar />
@@ -36,6 +37,7 @@ function App() {
                                             <Route path="/notifications" element={<Notifications />} />
                                             <Route path="/status" element={<StatusService />} />
                                             <Route path="/farming" element={<FarmingService />} />
+                                            <Route path="/company" element={<Company />} /> {/* Новый маршрут */}
                                         </Routes>
                                     </main>
                                 </div>

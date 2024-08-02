@@ -7,6 +7,7 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
+import { FaBuilding } from "react-icons/fa";
 import AuthChecker from '../cheker/AuthChecker';
 
 const Sidebar = () => {
@@ -26,6 +27,12 @@ const Sidebar = () => {
             <ul className="sidebar-list">
                 <div className="logo"></div>
                 <li>
+                    <Link to="/company" className="sidebar-link">
+                        <FaBuilding className="icon"/>
+                        <span>Компании</span>
+                    </Link>
+                </li>
+                <li>
                     <Link to="/votes" className="sidebar-link">
                         <MdHowToVote className="icon"/>
                         <span>Голосования</span>
@@ -37,7 +44,6 @@ const Sidebar = () => {
                         <span>QR Коды</span>
                     </Link>
                 </li>
-
                 <li>
                     <Link to="/status" className="sidebar-link">
                         <FaRegAddressCard className="icon"/>
