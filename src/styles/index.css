@@ -1,3 +1,4 @@
+/* src/styles/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,9 +28,9 @@ code {
 .main-content {
     background-color: rgba(229, 231, 235, 0.5); /* Светло-серый цвет */
     margin-left: 0px;
+    flex: 1; /* Добавляем этот стиль, чтобы контейнер растягивался */
 }
 
 .content-margin {
     margin-left: 1rem; /* Задаем отступ слева */
 }
-

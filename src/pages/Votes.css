@@ -87,8 +87,8 @@
 }
 
 .participant-avatar {
-    width: 3rem; /* Увеличить размер аватара */
-    height: 3rem; /* Увеличить размер аватара */
+    width: 60px; /* Увеличить размер аватара */
+    height: 60px; /* Увеличить размер аватара */
     border-radius: 50%;
     display: block;
     margin: 0 auto;
