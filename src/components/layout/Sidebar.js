@@ -43,30 +43,6 @@ const Sidebar = () => {
                         <span>QR Коды</span>
                     </Link>
                 </li>
-                <li>
-                    <Link to="/status" className={styles.sidebarLink}>
-                        <FaRegAddressCard className={styles.icon}/>
-                        <span>Статусы</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/farming" className={styles.sidebarLink}>
-                        <GiMining className={styles.icon}/>
-                        <span>Фарминг</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/airdrops" className={styles.sidebarLink}>
-                        <GiParachute className={styles.icon}/>
-                        <span>Промо Акции</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/tables" className={styles.sidebarLink}>
-                        <RiNftFill className={styles.icon}/>
-                        <span>NFT Витрина</span>
-                    </Link>
-                </li>
             </ul>
             <div className={styles.sidebarAuthButtons}>
                 <AuthChecker>

@@ -83,7 +83,7 @@
 
 .signInButton,
 .signOutButton {
-    background: lightslategray; /* Градиентный фон кнопки */
+    background: black; /* Градиентный фон кнопки */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -97,7 +97,7 @@
 
 .signInButton:hover,
 .signOutButton:hover {
-    background: linear-gradient(90deg, #0056b3 0%, #0094d9 100%); /* Темный градиент при наведении */
+    background: linear-gradient(90deg, #005BBB 0%, #007FFF 100%); /* Темный градиент при наведении */
     font-weight: 600;
 }
 
