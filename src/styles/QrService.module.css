@@ -1,5 +1,5 @@
-/* Общий контейнер для страницы голосований */
-.votesContainer {
+/* Общий контейнер для страницы QR-кодов */
+.qrContainer {
     margin-top: 26px;
     padding: 16px;
     padding-right: 15px;
@@ -12,8 +12,8 @@
     /* Градиентный фон */
 }
 
-/* Сетка для карточек голосований */
-.votesGrid {
+/* Сетка для карточек QR-кодов */
+.qrGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
@@ -21,8 +21,8 @@
     max-width: 1200px;
 }
 
-/* Стили для карточек голосований */
-.voteCard {
+/* Стили для карточек QR-кодов */
+.qrCard {
     background: rgba(255, 255, 255, 0.7); /* Прозрачный белый фон */
     backdrop-filter: blur(10px); /* Эффект размытия */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,8 +42,8 @@
 }
 
 .cardLogo {
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
     border-radius: 0.375rem;
     margin-right: 8px;
 }
@@ -90,7 +90,7 @@
     height: 60px; /* Увеличить размер аватара */
     border-radius: 50%;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto  ;
 }
 
 .cardDescription {
