@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.content-margin {
-    margin-left: 1rem; /* Задаем отступ слева */
-}
-
-/* Дополнительные стили */
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -24,11 +19,14 @@ code {
     monospace;
 }
 
-/* Фон для рабочей области */
 .main-content {
     background-color: rgba(229, 231, 235, 0.5); /* Светло-серый цвет */
-    margin-left: 0px;
-    flex: 1; /* Добавляем этот стиль, чтобы контейнер растягивался */
+    flex: 1; /* Растягиваем контейнер */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Скрываем переполнение */
 }
 
 .content-margin {
