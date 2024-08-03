@@ -1,8 +1,7 @@
-/* src/components/layout/Sidebar.css */
+/* src/styles/Sidebar.module.css */
 
 /* Основной стиль для боковой панели */
 .sidebar {
-
     backdrop-filter: blur(10px); /* Эффект размытия */
     color: black; /* Белый цвет текста */
     transform: translateX(0);
@@ -22,19 +21,19 @@
 }
 
 /* Заголовок боковой панели */
-.sidebar-header {
+.sidebarHeader {
     padding: 24px 32px;
     text-align: center;
 }
 
-.sidebar-title {
+.sidebarTitle {
     font-size: 1rem;
     font-weight: 600;
     color: black;
 }
 
 /* Список ссылок боковой панели */
-.sidebar-list {
+.sidebarList {
     margin: 16px;
     display: flex;
     flex-direction: column;
@@ -43,7 +42,7 @@
 }
 
 /* Ссылки в боковой панели */
-.sidebar-link {
+.sidebarLink {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -52,12 +51,11 @@
     text-decoration: none;
     font-weight: 500;
     color: black;
-
     transition: background 0.2s;
 }
 
 /* Активная ссылка */
-.active-link {
+.activeLink {
     background: linear-gradient(90deg, #005BBB 0%, #007FFF 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
@@ -70,21 +68,21 @@
 }
 
 /* Стили для ссылок при наведении */
-.sidebar-link:hover {
+.sidebarLink:hover {
     background: linear-gradient(90deg, #005BBB 0%, #007FFF 100%);
     color: white;
 }
 
 /* Кнопки аутентификации */
-.sidebar-auth-buttons {
+.sidebarAuthButtons {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.sign-in-button,
-.sign-out-button {
+.signInButton,
+.signOutButton {
     background: lightslategray; /* Градиентный фон кнопки */
     color: white;
     border: none;
@@ -97,14 +95,14 @@
     font-weight: 600;
 }
 
-.sign-in-button:hover,
-.sign-out-button:hover {
+.signInButton:hover,
+.signOutButton:hover {
     background: linear-gradient(90deg, #0056b3 0%, #0094d9 100%); /* Темный градиент при наведении */
     font-weight: 600;
 }
 
 /* Добавляем стили для кнопки Connect Wallet */
-.connect-wallet-button {
+.connectWalletButton {
     background: linear-gradient(90deg, #007BFF 0%, #00C6FF 100%); /* Градиентный фон кнопки */
     color: white; /* Цвет текста */
     border: none; /* Убираем границу */
@@ -120,7 +118,7 @@
     align-items: center; /* Центрирование внутреннего элемента */
 }
 
-.connect-wallet-button:hover {
+.connectWalletButton:hover {
     background: linear-gradient(90deg, #0056b3 0%, #0094d9 100%); /* Темный градиент при наведении */
     font-weight: 600; /* Толщина шрифта */
 }
