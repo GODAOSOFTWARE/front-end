@@ -5,17 +5,29 @@ import styles from '../styles/QrService.module.css';
 const QRCode = () => {
     const qrCardsData = [
         {
-            logo: "https://img.icons8.com/?size=200&id=QGXUO3LxhYrn&format=png",
-            title: "Создать код с погашением по паролю",
-            description: "После сканирования камерой необходимо ввести пароль для зачисления кэшбека на личный счет",
+            logo: "https://img.icons8.com/?size=200&id=PlxPvBS2zQOP&format=png",
+            title: "QR коды c личным паролем",
+            description: "Создавайте вопросы, ответы и установите награду, которую получит пользователь за правильный ответ",
             buttonText: "Создать QR код",
         },
         {
-            logo: "https://img.icons8.com/?size=200&id=TYZP6liMd2uZ&format=png",
-            title: "Создать код с автоматическим погашением",
-            description: "После сканирования камерой произойдет автоматическое зачисление кэшбека на личный счет",
+            logo: "https://img.icons8.com/?size=512&id=8OdwzXFjBVH2&format=png",
+            title: "QR коды без пароля",
+            description: "Cоздайте вознаграждение за сканирование QR кода .Пользователь получит за это кэшбек ",
             buttonText: "Создать QR код",
-        }
+        },
+        {
+            logo: "https://img.icons8.com/?size=512&id=8OdwzXFjBVH2&format=png",
+            title: "Текстовые коды с паролем",
+            description: "После сканирования камерой необходимо ввести пароль для зачисления кэшбека на личный счет",
+            buttonText: "Создать партию",
+        },
+        {
+            logo: "https://img.icons8.com/?size=512&id=8OdwzXFjBVH2&format=png",
+            title: "Текстовые код без пароля",
+            description: "После сканирования камерой произойдет автоматическое зачисление кэшбека на личный счет",
+            buttonText: "Создать партию",
+        },
 
     ];
 
