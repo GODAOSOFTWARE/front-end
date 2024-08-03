@@ -2,6 +2,7 @@
 
 /* Общий контейнер для страницы голосований */
 .votes-container {
+    margin-top: 26px;
     padding: 16px;
     padding-right: 15px;
     padding-left: 300px;

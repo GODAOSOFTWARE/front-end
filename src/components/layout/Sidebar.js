@@ -7,7 +7,7 @@ import { FaRegAddressCard } from "react-icons/fa6";
 import { GiMining } from "react-icons/gi";
 import { GiParachute } from "react-icons/gi";
 import { RiNftFill } from "react-icons/ri";
-import { FaBuilding } from "react-icons/fa";
+import { IoMdBusiness } from "react-icons/io";
 import AuthChecker from '../cheker/AuthChecker';
 
 const Sidebar = () => {
@@ -28,7 +28,7 @@ const Sidebar = () => {
                 <div className="logo"></div>
                 <li>
                     <Link to="/company" className="sidebar-link">
-                        <FaBuilding className="icon"/>
+                        <IoMdBusiness className="icon"/>
                         <span>Компании</span>
                     </Link>
                 </li>

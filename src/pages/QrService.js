@@ -2,49 +2,29 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Импортируем useNavigate для переадресации
 import './Votes.css'; // Подключаем объединенный файл стилей
 
+
+
 const Votes = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState(null);
     const navigate = useNavigate(); // Инициализируем хук useNavigate
 
     const cardsData = [
-        {
-            logo: "https://storage.yandexcloud.net/ds-ods/files/media/hub/icon/170957ff3ff5/sber.png",
-            dao: "DAO",
-            daoName: "Сбербанк",
-            creator: "Создать личный чек",
-            description: "Предлагаю создать платформу для привлечения новой аудитории в экосистему проектов, построенных на базе блокчейна Decimal.",
-            participants: [
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49MbJrRqd0q-OizJgU9RHiTIF-9ksD3gDUg&s",
-            ],
-            participantsCount: 70,
-            dueDate: "02.03.22"
-        },
-        {
-            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqB7psH_iUqd6AZROsDJZXwI6nS5uR5xynCg&s",
-            dao: "DAO",
-            daoName: "Т-Банк",
-            creator: "QR код для адреса",
-            description: "Предлагаю создать функционал выпуска QR кодов с кэшбеком для стимулирования покупок.",
-            participants: [
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49MbJrRqd0q-OizJgU9RHiTIF-9ksD3gDUg&s",
-            ],
-            participantsCount: 50,
-            dueDate: "15.04.22"
-        },
-        {
-            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5m5sgZTU5pW_2im4QDQhBZivrDe79r1RUig&s",
-            dao: "DAO",
-            daoName: "Федерация Самбо",
-            creator: "Кэшбек QR коды",
-            description: "Предлагаю внедрить систему голосований для улучшения взаимодействия с пользователями.",
-            participants: [
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49MbJrRqd0q-OizJgU9RHiTIF-9ksD3gDUg&s",
-            ],
-            participantsCount: 120,
-            dueDate: "30.06.22"
-        },
 
+        {
+            title: "Создать QR код с погашением по паролю",
+            description: "После сканирования камерой необходимо ввести пароль для зачисления кэшбэка на личный счет",
+            img: [
+                "https://img.icons8.com/?size=200&id=QGXUO3LxhYrn&format=png",
+            ],
+        },
+        {
+            title: "Создать QR код с автоматическим погашением",
+            description: "После сканирования камерой произойдет автоматическое зачисление кэшбека на личный счет ",
+            img: [
+                "https://img.icons8.com/?size=200&id=TYZP6liMd2uZ&format=png",
+            ],
+        },
 
     ];
 
@@ -72,10 +52,10 @@ const Votes = () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <img src={card.participants[0]} alt={card.creator} className="participant-avatar" />
-                            <h3 className="card-title">{card.creator}</h3>
+                            <img src={card.img[0]} alt={card.title} className="participant-avatar" />
+                            <h3 className="card-title">{card.title}</h3>
                             <p className="card-description">{card.description}</p>
-                            <button className="more-details-button" onClick={() => openModal(card)}>Создать промо код</button>
+                            <button className="more-details-button" onClick={() => openModal(card)}>Создать QR код</button>
                         </div>
                         <div className="card-footer">
 
@@ -89,8 +69,8 @@ const Votes = () => {
                 <div className="modal" onClick={closeModal}>
                     <div className="modal-content" onClick={e => e.stopPropagation()}>
                         <span className="close" onClick={closeModal}>&times;</span>
-                        <img src={modalData.participants[0]} alt={modalData.creator} className="modal-avatar" />
-                        <h3 className="card-title">{modalData.creator}</h3>
+                        <img src={modalData.img[0]} alt={modalData.title} className="modal-avatar" />
+                        <h3 className="card-title">{modalData.title}</h3>
                         <p className="card-description">{modalData.description}</p>
                         <button className="support-button">Поддержать</button>
                         <button className="decline-button">Отклонить</button>
