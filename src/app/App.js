@@ -9,7 +9,6 @@ const Votes = lazy(() => import('../pages/Votes'));
 const QrService = lazy(() => import('../pages/QrService'));
 const AirdropService = lazy(() => import('../pages/AirdropService'));
 const SignIn = lazy(() => import('../pages/SignIn'));
-const WalletConnectPage = lazy(() => import('../pages/WalletConnectPage'));
 const StatusService = lazy(() => import('../pages/StatusService'));
 const FarmingService = lazy(() => import('../pages/FarmingService'));
 const Company = lazy(() => import('../pages/Company')); // Импорт нового компонента
@@ -21,7 +20,6 @@ function App() {
                 <Suspense fallback={<div>Loading...</div>}>
                     <Routes>
                         <Route path="/sign-in" element={<SignIn />} />
-                        <Route path="/walletconnect" element={<WalletConnectPage />} />
                         <Route path="/createDAO" element={<CreateDAO />} />
                         <Route path="/" element={<LandingPage />} />
                         <Route path="*" element={
