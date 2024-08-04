@@ -2,6 +2,7 @@
 
 /* Основной стиль для боковой панели */
 .sidebar {
+
     backdrop-filter: blur(10px); /* Эффект размытия */
     color: black; /* Белый цвет текста */
     transform: translateX(0);
@@ -83,8 +84,8 @@
 
 .signInButton,
 .signOutButton {
-    background: black; /* Градиентный фон кнопки */
-    color: white;
+    background: white; /* Градиентный фон кнопки */
+    color: black;
     border: none;
     padding: 10px 20px;
     margin: 10px 0;

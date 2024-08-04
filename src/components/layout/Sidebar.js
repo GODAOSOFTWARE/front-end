@@ -76,21 +76,6 @@ const Sidebar = () => {
 
 
             </ul>
-            <div className={styles.sidebarAuthButtons}>
-                <AuthChecker>
-                    {(isAuthenticated) => (
-                        isAuthenticated ? (
-                            <button className={styles.signOutButton} onClick={handleLogoutClick}>
-                                Выйти
-                            </button>
-                        ) : (
-                            <button className={styles.signInButton} onClick={handleSignInClick}>
-                                Войти
-                            </button>
-                        )
-                    )}
-                </AuthChecker>
-            </div>
         </aside>
     );
 };

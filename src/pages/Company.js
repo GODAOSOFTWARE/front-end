@@ -108,8 +108,7 @@ const Company = () => {
                             <button className="more-details-button" onClick={() => openModal(card)}>О компании</button>
                         </div>
                         <div className="card-footer">
-                            <div className="participants-count">{card.participantsCount} Participants</div>
-                            <div className="due-date">{card.dueDate} Due date</div>
+                            <div className="participants-count">{card.participantsCount} человек</div>
                         </div>
                     </div>
                 ))}
