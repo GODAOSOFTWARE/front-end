@@ -52,6 +52,12 @@ const Sidebar = () => {
                 <li>
                     <Link to="/dashboard" className={styles.sidebarLink}>
                         <IoMdBusiness className={styles.icon}/>
+                        <span>Мой личный счет</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/dashboard" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
                         <span>Мои компании</span>
                     </Link>
                 </li>
