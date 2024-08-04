@@ -3,9 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from '../../styles/Sidebar.module.css'; // Новый путь импорта
 import { IoQrCodeOutline } from 'react-icons/io5';
 import { MdHowToVote } from "react-icons/md";
-import { FaRegAddressCard } from "react-icons/fa6";
-import { GiMining, GiParachute } from "react-icons/gi";
-import { RiNftFill } from "react-icons/ri";
 import { IoMdBusiness } from "react-icons/io";
 import AuthChecker from '../cheker/AuthChecker';
 
@@ -25,14 +22,9 @@ const Sidebar = () => {
     return (
         <aside className={styles.sidebar}>
             <ul className={styles.sidebarList}>
+                Сервисы
                 <li>
-                    <Link to="/company" className={styles.sidebarLink}>
-                        <IoMdBusiness className={styles.icon}/>
-                        <span>Компании</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/votes" className={styles.sidebarLink}>
+                    <Link to="/vote-service" className={styles.sidebarLink}>
                         <MdHowToVote className={styles.icon}/>
                         <span>Голосования</span>
                     </Link>
@@ -43,6 +35,46 @@ const Sidebar = () => {
                         <span>QR Коды</span>
                     </Link>
                 </li>
+                Мониторинг
+                <li>
+                    <Link to="/company" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>Компании</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/votes-list" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>Голосования</span>
+                    </Link>
+                </li>
+                Личный кабинет
+                <li>
+                    <Link to="/dashboard" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>Мои компании</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/votes" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>Мои голосования</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/votes" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>DAO голосования</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/cashback" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>Мои QR коды</span>
+                    </Link>
+                </li>
+
+
             </ul>
             <div className={styles.sidebarAuthButtons}>
                 <AuthChecker>

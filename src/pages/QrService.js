@@ -5,28 +5,28 @@ import styles from '../styles/QrService.module.css';
 const QRCode = () => {
     const qrCardsData = [
         {
-            logo: "https://img.icons8.com/?size=200&id=PlxPvBS2zQOP&format=png",
-            title: "QR коды c личным паролем",
+            logo: "https://img.icons8.com/?size=200&id=DNzhylvAeUk8&format=png",
+            title: "QR коды для викторин и тестирований",
             description: "Создавайте вопросы, ответы и установите награду, которую получит пользователь за правильный ответ",
             buttonText: "Создать QR код",
         },
         {
-            logo: "https://img.icons8.com/?size=512&id=8OdwzXFjBVH2&format=png",
-            title: "QR коды без пароля",
-            description: "Cоздайте вознаграждение за сканирование QR кода .Пользователь получит за это кэшбек ",
+            logo: "https://img.icons8.com/?size=200&id=Uv0J78DjutqZ&format=png",
+            title: "QR коды для получения вознаграждения",
+            description: "Установите сумму вознаграждения за сканирование QR кода .Пользователь получит его автоматически",
             buttonText: "Создать QR код",
         },
         {
-            logo: "https://img.icons8.com/?size=512&id=8OdwzXFjBVH2&format=png",
-            title: "Текстовые коды с паролем",
+            logo: "https://img.icons8.com/?size=200&id=gMZqjDbERCF7&format=png",
+            title: "QR коды с уникальными паролями",
             description: "После сканирования камерой необходимо ввести пароль для зачисления кэшбека на личный счет",
-            buttonText: "Создать партию",
+            buttonText: "Создать QR код",
         },
         {
-            logo: "https://img.icons8.com/?size=512&id=8OdwzXFjBVH2&format=png",
-            title: "Текстовые код без пароля",
-            description: "После сканирования камерой произойдет автоматическое зачисление кэшбека на личный счет",
-            buttonText: "Создать партию",
+            logo: "https://img.icons8.com/?size=200&id=KfaNP9udCPNO&format=png",
+            title: "QR коды для пополнения счета",
+            description: "Пользователь автоматически станет вашим партнером и получит приветственное начисления монет от Вас",
+            buttonText: "Создать QR код",
         },
 
     ];

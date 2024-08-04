@@ -37,7 +37,7 @@
     margin: 16px;
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 5px;
     color: darkblue;
 }
 
@@ -97,7 +97,7 @@
 
 .signInButton:hover,
 .signOutButton:hover {
-    background: linear-gradient(90deg, #005BBB 0%, #007FFF 100%); /* Темный градиент при наведении */
+    background: linear-gradient(90deg, #0959AA 0%, #0A66C2 100%); /* Темный градиент при наведении */
     font-weight: 600;
 }
 
