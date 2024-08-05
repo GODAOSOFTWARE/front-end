@@ -8,25 +8,25 @@ const VoteService = () => {
             logo: "https://img.icons8.com/?size=200&id=rWegvKYgyOgP&format=png",
             title: "Одноранговые голосования",
             description: "Голосования с равной силой голоса для каждого участника голосований",
-            buttonText: "Создать голосование",
+            buttonText: "Раздел в разработке",
         },
         {
             logo: "https://img.icons8.com/?size=200&id=klbo0tqOB1KI&format=png",
             title: "Корпоративные голосования",
             description: "Голосования для корпоративных клиентов с собственной CRM системой",
-            buttonText: "Создать голосование",
+            buttonText: "Раздел в разработке",
         },
         {
             logo: "https://img.icons8.com/?size=200&id=HGxu03qfOJTr&format=png",
             title: "Голосования с вознаграждением",
             description: "Голосования с автоматическим вознаграждением каждому участника опроса",
-            buttonText: "Создать голосование",
+            buttonText: "Раздел в разработке",
         },
         {
             logo: "https://img.icons8.com/?size=200&id=EFLbMfpKrZze&format=png",
             title: "Кастомное голосование",
             description: "Соберите функциональность для собственного голосования и получите готовый сценарий",
-            buttonText: "Принять участие",
+            buttonText: "Раздел в разработке",
         },
     ];
 
