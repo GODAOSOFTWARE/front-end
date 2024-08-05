@@ -1,0 +1,70 @@
+.tableContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.cardHeader {
+    border-radius: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.cardHeaderInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cardHeaderInnerMd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inputSearch {
+    width: 100%;
+}
+
+.table {
+    margin-top: 1rem;
+    width: 100%;
+    min-width: max-content;
+    text-align: left;
+}
+
+.tableHeader {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: rgba(241, 245, 249, 0.5);
+    padding: 1rem;
+}
+
+.tableRow {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.lastTableRow {
+    padding: 1rem;
+}
+
+.cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem;
+}
+
+.cardFooterButtonGroup {
+    display: flex;
+    gap: 0.5rem;
+}

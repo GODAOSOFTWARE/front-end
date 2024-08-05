@@ -4,6 +4,7 @@ import Sidebar from '../components/layout/Sidebar';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
 import CreateDAO from '../components/forms/CreateDAO';
 import LandingPage from '../pages/LandingPage/LandingPage';
+import Members from '../pages/Members'; // Импортируем новый компонент
 
 const AllVotes = lazy(() => import('../pages/Votes'));
 const QrService = lazy(() => import('../pages/QrService'));
@@ -14,6 +15,8 @@ const FarmingService = lazy(() => import('../pages/FarmingService'));
 const Company = lazy(() => import('../pages/Company')); // Импорт нового компонента
 const CreateVote = lazy(() => import('../pages/CreateVote')); // Импорт нового компонента
 const Voteservice = lazy(() => import('../pages/VoteService')); // Импорт нового компонента
+
+
 
 function App() {
     return (
@@ -38,6 +41,7 @@ function App() {
                                             <Route path="/company" element={<Company />} /> {/* Новый маршрут */}
                                             <Route path="/createvote" element={<CreateVote />} /> {/* Новый маршрут */}
                                             <Route path="/vote-service" element={<Voteservice />} /> {/* Новый маршрут */}
+                                            <Route path="/members" element={<Members />} /> {/* Новый маршрут */}
                                         </Routes>
                                     </main>
                                 </div>

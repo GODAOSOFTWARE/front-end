@@ -48,11 +48,17 @@ const Sidebar = () => {
                         <span>Голосования</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/members" className={styles.sidebarLink}>
+                        <IoMdBusiness className={styles.icon}/>
+                        <span>Пользователи</span>
+                    </Link>
+                </li>
                 Личный кабинет
                 <li>
                     <Link to="/dashboard" className={styles.sidebarLink}>
                         <IoMdBusiness className={styles.icon}/>
-                        <span>Мой личный счет</span>
+                        <span>Личный счет</span>
                     </Link>
                 </li>
                 <li>
