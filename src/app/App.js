@@ -4,7 +4,7 @@ import Sidebar from '../components/layout/Sidebar';
 import { Web3ModalProvider } from '../components/web3/Web3ModalProvider.tsx';
 import CreateDAO from '../components/forms/CreateDAO';
 import LandingPage from '../pages/LandingPage/LandingPage';
-import Members from '../pages/Members'; // Импортируем новый компонент
+import Members from '../pages/Members';
 
 const AllVotes = lazy(() => import('../pages/Votes'));
 const QrService = lazy(() => import('../pages/QrService'));
